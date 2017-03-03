@@ -46,7 +46,7 @@ app.controller('login',function ($scope,$rootScope,$state,$http) {
     if(!$scope.form_obj.role){$scope.role_err='请输入角色';return false;}
     if($scope.form_obj.salary){
       if($scope.salary_err){return false;}
-      if(6000>=$scope.form_obj.salary>4000){
+      if(4000>$scope.form_obj.salary<=6000){
         $http.get('sever/sever5.json').success(function (data) {
           $rootScope.Permissions=data;
           setStore(cacheStore,data)
