@@ -1,0 +1,55 @@
+[
+  {
+    "route": "user",
+    "name": "个人中心",
+    "children": [
+      {
+        "route": "basic",
+        "name": "基本信息"
+      },
+      {
+        "route": "education",
+        "name": "教育经历"
+      },
+      {
+        "route": "work",
+        "name": "工作经历"
+      },
+      {
+        "route": "skill",
+        "name": "职业技能"
+      },
+      {
+        "route": "self",
+        "name": "自我评价"
+      }
+    ]
+  },
+  {
+    "name": "休闲小游戏",
+    "route": "games",
+    "children": [
+      {
+        "route": "game2048",
+        "name": "2048"
+      },
+      {
+        "route": "planewar",
+        "name": "打飞机"
+      },
+      {
+        "route": "tetris",
+        "name": "俄罗斯方块"
+      }
+    ]
+  },
+  {
+    "name":"联系开发者",
+    "route":"contact",
+    "children":[{
+      "name":"邀请面试",
+      "route":"interview"
+    }
+    ]
+  }
+]

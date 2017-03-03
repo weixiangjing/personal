@@ -1,0 +1,23 @@
+<div ng-include="'tal/header.html'"></div>
+<div class="container body_muen">
+    <div ng-include="'tal/sidebar.html'"></div>
+    <div class="muen muen_user" ng-if="HeadRoute&&HeadRoute=='user'">
+        <div ng-include="'muen_lib/basic.html'" ng-if="activ&&activ=='basic'"></div>
+        <div ng-include="'muen_lib/self.html'" ng-if="activ&&activ=='self'"></div>
+        <div ng-include="'muen_lib/skill.html'" ng-if="activ&&activ=='skill'"></div>
+        <div ng-include="'muen_lib/work.html'" ng-if="activ&&activ=='work'"></div>
+        <div ng-include="'muen_lib/education.html'" ng-if="activ&&activ=='education'"></div>
+    </div>
+    <div class="muen muen_game" ng-if="HeadRoute&&HeadRoute=='games'">
+        <div ng-include="'muen_lib/game2048.html'" ng-if="activ&&activ=='game2048'"></div>
+        <div ng-include="'muen_lib/planewar.html'" ng-if="activ&&activ=='planewar'"></div>
+        <div ng-include="'muen_lib/tetris.html'" ng-if="activ&&activ=='tetris'"></div>
+    </div>
+    <div class="muen muen_contact" ng-if="HeadRoute&&HeadRoute=='contact'">
+        <div ng-include="'muen_lib/interview.html'" ng-if="activ&&activ=='interview'"></div>
+    </div>
+</div>
+
+
+
+<div ng-include="'tal/footer.html'"></div>

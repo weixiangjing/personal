@@ -1,0 +1,35 @@
+<div ng-include="'tal/header.html'"></div>
+
+
+<div class="login container">
+  <form action="" onsubmit="return false">
+    <div class="form-group row">
+      <label for="role" class="col-xs-3">角色</label>
+      <input type="text" id="role" placeholder="到访角色"
+             class="form-control" ng-model="form_obj.role"
+             ng-change="onchange()" maxlength="10"
+      >
+      <p>{{role_err}}</p>
+    </div>
+    <div class="form-group row" style="margin-bottom: 20px">
+      <label class="col-xs-3">预设角色</label>
+      <span ng-repeat="v in arr"><button class="btn btn-info" ng-click="keyword(this)">{{v}}</button></span>
+    </div>
+    <div class="form-group row" ng-show="_role">
+      <label for="salary" class="col-xs-3">薪资</label>
+      <input type="text" id="salary" placeholder="权限分级"
+             class="form-control" ng-model="form_obj.salary"
+             ng-change="salaryOnchange()"
+      >
+      <p>{{salary_err}}</p>
+    </div>
+    <hr>
+    <div class="form-group">
+      <button class="btn btn-success btn-block" ng-click="submit()">开始访问</button>
+    </div>
+
+  </form>
+</div>
+
+
+<div ng-include="'tal/footer.html'"></div>

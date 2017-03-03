@@ -1,0 +1,39 @@
+<div>
+    <h4>游戏说明：</h4>
+    <ul>
+        <li>1:输入2-8的纯数字，点击“开始游戏”，说明：数字越大游戏越简单，默认最大数为8；</li>
+        <li>2:使用键盘上的方向键控制格子移动；</li>
+    </ul>
+</div>
+<div>
+    <div>
+        <input type="text" placeholder="输入2-8的纯数字"
+               ng-model="gameNum" ng-change="writeNum(this)" class="form-control">
+        <button class="btn btn-info" ng-click="startGame()">开始游戏</button>
+    </div>
+    <p class="write_err">{{write_err}}</p>
+</div>
+
+<div class="game2048">
+    <!--分数-->
+
+    <p >总分：<span id="score"></span>
+        最高分：<span id="topscore"></span>
+    </p>
+
+    <div id="gridpanl">
+        <!--背景格-->
+
+
+    </div>
+    <div id="gameover">
+        <div><!--背景div--></div>
+        <p><!--前景提示-->
+            GameOver<br>
+            Score:<span id="finalScore"></span><br>
+            <a class="button" onclick="game.start()">
+                Try again!
+            </a>
+        </p>
+    </div>
+</div>
