@@ -47,13 +47,13 @@ app.controller('login',function ($scope,$rootScope,$state,$http) {
     if($scope.form_obj.salary){
       if($scope.salary_err){return false;}
       if(6000>=$scope.form_obj.salary>4000){
-        $http.post('sever/sever5.json').success(function (data) {
+        $http.get('sever/sever5.json').success(function (data) {
           $rootScope.Permissions=data;
           setStore(cacheStore,data)
           $state.go('muen');
         })}
       if($scope.form_obj.salary>6000){
-        $http.post('sever/sever6.json').success(function (data) {
+        $http.get('sever/sever6.json').success(function (data) {
           $rootScope.Permissions=data;
           setStore(cacheStore,data)
           $state.go('muen');
