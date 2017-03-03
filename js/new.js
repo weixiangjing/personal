@@ -61,7 +61,7 @@ app.controller('login',function ($scope,$rootScope,$state,$http) {
       }
     }
     if(!$scope.form_obj.salary||$scope.form_obj.salary<=4000){
-      $http.post('sever/sever4.json').success(function (data) {
+      $http.get('sever/sever4.json').success(function (data) {
         $rootScope.Permissions=data;
         setStore(cacheStore,data)
         $state.go('muen');
