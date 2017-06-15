@@ -1,0 +1,77 @@
+@import "../../../../styles/variable";
+
+.stores-table{
+  height: 500px;
+  overflow-y: auto;
+  border-bottom: solid 1px $grey;
+  .ant-table-thead{
+    display: none;
+  }
+  .ant-table-row{
+    &.selected{
+      background: #ecf6fd;
+    }
+    &.unselected{
+      cursor: pointer;
+    }
+  }
+  .ant-table-tbody>tr:not(.selected):hover{
+    background: none;
+  }
+}
+.channel-item{
+  border: 1px solid #cfe8fb;
+  background-color: #e7f4fd;
+  padding: $design-gutter;
+  margin-bottom: $design-gutter;
+  border-radius: 3px;
+  &.disabled{
+    background: #ebebeb;
+    border: 1px solid #ebebeb;
+    color: #ccc;
+  }
+}
+.channel-op .inline-block{
+  vertical-align: top;
+}
+.not-opened{
+  li{
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    button{
+      .anticon-plus{
+        font-size: 3em;
+      }
+      &:not(:hover){
+        .anticon-plus{
+          color: $normal-color;
+        }
+      }
+    }
+    .pay-mode-name{
+      display: block;
+      text-align: center;
+    }
+  }
+}
+.habit{
+  .fields{
+    margin-left: $design-gutter;
+  }
+  .ant-checkbox-group-item{
+    margin-bottom: $design-gutter*2;
+    display: block;
+  }
+}
+.logs{
+  max-height: 500px;
+  overflow-y: auto;
+}
+.log-view{
+  .log_style_btn{
+    float: right;
+    margin: $design-gutter;
+    position: relative;
+    z-index: 9;
+  }
+}

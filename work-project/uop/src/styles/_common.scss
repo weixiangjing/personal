@@ -1,0 +1,263 @@
+@import "variable";
+@import "mixin";
+
+body{
+  background: $grey_normal;
+}
+.ant-none-border {
+  .ant-radio-button-wrapper {
+    border: none !important;
+  }
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.input-size-xs {
+  input, textarea {
+    width: $width_xs
+  }
+  .ant-select {
+    width: $width_xs
+  }
+}
+
+.font-small {
+  font-size: $font_sm;
+}
+
+.font-md {
+  font-size: $font_md;
+}
+
+.font-lg {
+  font-size: $font_lg;
+}
+
+.font-xlg {
+  font-size: $font_xlg;
+}
+
+.input-size-sm {
+  input, textarea {
+    width: $width_sm
+  }
+  .ant-select {
+    width: $width_sm
+  }
+}
+
+.text-md {
+  font-size: 14px;
+}
+
+.main-title {
+  font-size: $main_title;
+  color: $title_color;
+  font-weight: 500;
+}
+
+.sec_title {
+  font-size: $sec_title;
+  color: $title_color;
+  font-weight: 500;
+}
+
+.small_title {
+  font-size: $small_title;
+  color: $title_color;
+  font-weight: 500;
+}
+
+.text {
+  font-size: $small_title;
+  color: $title_color
+}
+
+.des-text {
+  font-size: $small_title;
+  color: $des_text_color;
+}
+
+.invalid-color {
+  color: $invalid_color;
+}
+
+.link-color {
+  color: $link_color;
+}
+
+.input-size-de {
+  input, textarea {
+    width: $width_de
+  }
+  .ant-select {
+    width: $width_de
+  }
+  .ant-cascader-picker {
+    width: $width_de;
+    display: inline-block;
+  }
+}
+
+.input-size-lg {
+  input, textarea {
+    width: $width_lg
+  }
+  .ant-select {
+    width: $width_lg
+  }
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.ant-modal.modal-no-cancel .ant-modal-footer {
+  button:first-child {
+    display: none;
+  }
+}
+
+.ant-btn.ant-btn-danger {
+  background-color: #ea473d;
+  border-color: #ea473d;
+  color: #ffffff;
+  &:hover {
+    background-color: $highlight-color;
+    border-color: $highlight-color;
+    color: #ffffff;
+  }
+}
+
+.ant-btn.ant-btn-success {
+  background-color: #77ab6d;
+  border-color: #77ab6d;
+  color: #ffffff;
+  &:hover {
+    background-color: $success-color;
+    border-color: $success-color;
+    color: #ffffff;
+  }
+}
+
+.ant-card-head {
+  font-size: $main_title;
+  font-weight: 500;
+  color: $title_color;
+  padding: 14px 24px 10px 24px;
+  height: auto;
+  line-height: normal;
+
+}
+.gutter{
+  margin: $design-gutter;
+}
+.gutter-v{
+  margin: $design-gutter 0;
+}
+.gutter-h{
+  margin:0 $design-gutter
+}
+.gutter-left{
+  margin-left: $design-gutter;
+}
+.gutter-right{
+  margin-right:$design-gutter;
+}
+.gutter-top{
+  margin-top: $design-gutter;
+}
+.margin-bottom,.gutter-bottom{
+  margin-bottom:$design-gutter;
+}
+.over-hide{
+  overflow: hidden;
+}
+.gutter-v-lg{
+  margin: $design-gutter_large 0;
+}
+.gutter-h-lg{
+  margin:0 $design-gutter_large
+}
+.gutter-left-lg{
+  margin-left: $design-gutter_large;
+}
+.gutter-right-lg{
+  margin-right:$design-gutter_large;
+}
+.gutter-top-lg{
+  margin-top: $design-gutter_large;
+}
+.gutter-bottom-lg{
+  margin-bottom:$design-gutter_large;
+}
+.rotate360 {
+  @include rotate(180deg);
+}
+
+.transition {
+  @include transition(all, 300ms);
+
+}
+
+.hover-scale:hover {
+  @extend .transition;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.text-gray {
+  color: $grey
+}
+
+.bg-default {
+  background: $grey_normal;
+}
+
+.x-scroll{
+  &::-webkit-scrollbar{
+    width:5px;
+  }
+  &::-webkit-scrollbar-thumb{
+    background-color: $grey_normal;
+    border-radius: 3px;
+    border: solid 1px $normal-color;
+  }
+}
+.page-content{
+  padding: $design-gutter;
+  margin: $design-gutter-large 50px;
+  min-width: 600px;
+  min-height: 500px;
+  background: #ffffff;
+}
+.page-title{
+  padding: $design-gutter $design-gutter*3 $design-gutter*3;
+  border-bottom: solid 1px $grey_normal;
+  >.title-icon{
+    font-size: 40px;
+    background-color: #00b3ee;
+    color: #ffffff;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  >.title-name{
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: $design-gutter*2;
+  }
+}
+.bg-dark{
+  background-color: #3f3f3f;
+}

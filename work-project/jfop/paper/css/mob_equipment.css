@@ -1,0 +1,432 @@
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+    padding: 0;
+    padding-bottom: 4em;
+  }
+
+  #into input.form-control,
+  #into select.form-control {
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  #into input.form-control:focus,
+  #into select.form-control:focus {
+    border-color: transparent;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  #into .Top {
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-bottom: 1em;
+  }
+  #into .Top label {
+    display: block;
+    line-height: 28px;
+    margin-bottom: 0;
+  }
+  #into .Top > p {
+    display: none;
+  }
+  #into .Top li {
+    padding-left: 1em;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    margin-top: .5em;
+  }
+  #into .Top li input {
+    margin-bottom: 0.5em;
+  }
+  form .jinJ,
+  form .channel,
+  form .salesman {
+    padding: 0;
+  }
+  #into label {
+    line-height: normal;
+  }
+  #into .jinJ ul,
+  #into .channel ul {
+    float: left;
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 0;
+  }
+  #into .jinJ ul li,
+  #into .channel ul li {
+    padding: 0;
+    margin-right: 1em;
+    height: 30px;
+  }
+  #into .jinJ ul li label,
+  #into .channel ul li label {
+    width: 100px;
+  }
+  #into .ref {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-bottom: 1em;
+  }
+  #into .ref p {
+    background: #E4FCED;
+    color: #5CAE7C;
+    padding: 5px 10px;
+  }
+  #into .ref li {
+    overflow: hidden;
+    border: none;
+    float: none;
+    border-radius: 0;
+    margin-right: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  #into .ref li label {
+    width: 25%;
+    text-align: left;
+    display: block;
+    padding-top: 7px;
+  }
+  #into .ref li input {
+    margin-bottom: 0;
+  }
+  #into .ref li:first-child {
+    border-bottom: 1px solid #eeeeee;
+  }
+  #into .salesman ul {
+    margin-bottom: 1em;
+  }
+  #into .salesman ul li {
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    padding-left: 10px;
+    margin-top: .5em;
+  }
+  #into .salesman ul li label {
+    display: block;
+    padding-top: 7px;
+  }
+  #into .salesman ul li input {
+    margin-bottom: 0.5em;
+  }
+  #into .salesman ul li:last-child {
+    border-bottom: none;
+  }
+  #into button {
+    width: 100%;
+    margin-left: 0;
+    border-radius: 0;
+  }
+  #into input[type="checkbox"] {
+    margin-right: 0;
+  }
+  #into ul li img {
+    width: 20px;
+    height: 20px;
+  }
+  #into .sheB li span,
+  #into .sheB li p {
+    line-height: 28px;
+  }
+  .header {
+    display: none;
+  }
+  form .form-group > h4 {
+    padding: .5em 0;
+    margin: 0;
+    margin-bottom: 1em;
+    background: #333;
+  }
+  form .form-group > h4 span {
+    display: none;
+  }
+  form .form-group > h4 p {
+    color: #fff;
+    font-size: 12px;
+  }
+  .container {
+    padding: 0;
+  }
+  .msg div,
+  .pic div {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 30%;
+  }
+  .form-control {
+    font-size: 12px;
+    height: 28px;
+  }
+  .Input label {
+    font-size: 12px;
+  }
+  .img-li p > span {
+    font-size: 14px;
+  }
+  #into_b .header {
+    display: block;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  #into_b .header p {
+    line-height: 20px;
+  }
+  #into_b .remak {
+    border-top: none;
+    padding: 0;
+    padding-bottom: 1em;
+    margin-bottom: 0;
+  }
+  #into_b .remak > h4 {
+    padding: .5em 0;
+    margin: 0;
+    margin-bottom: 1em;
+    background: #333;
+  }
+  #into_b .remak > h4 span {
+    display: none;
+  }
+  #into_b .remak > h4 p {
+    color: #fff;
+    font-size: 12px;
+  }
+  #into_detail > div {
+    padding: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+  #into_detail > div > h4 {
+    padding: .5em 0;
+    margin: 0;
+    margin-bottom: 1em;
+    background: #333;
+  }
+  #into_detail > div > h4 span {
+    display: none;
+  }
+  #into_detail > div > h4 p {
+    color: #fff;
+    font-size: 12px;
+  }
+  #into_detail .Input,
+  #into_detail .sheB {
+    padding: 0 1em;
+  }
+  #into_detail .Input .control-label,
+  #into_detail .sheB .control-label {
+    padding-right: .3em;
+    line-height: normal;
+    padding-top: 7px;
+    color: #031e48;
+    font-weight: bold;
+  }
+  #into_detail .Input .control-label i > a img,
+  #into_detail .sheB .control-label i > a img {
+    height: 20px;
+    width: 20px;
+  }
+  #into_detail .Input li.form-group,
+  #into_detail .sheB li.form-group {
+    border-bottom: 1px solid #eee;
+    padding: 0;
+  }
+  #into_detail .Input li.form-group input,
+  #into_detail .sheB li.form-group input,
+  #into_detail .Input li.form-group select,
+  #into_detail .sheB li.form-group select {
+    margin-bottom: .5em;
+  }
+  #into_detail .Input li.form-group div[data-toggle='modal'],
+  #into_detail .sheB li.form-group div[data-toggle='modal'] {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  #into_detail .Input li.form-group > a img,
+  #into_detail .sheB li.form-group > a img {
+    height: 20px;
+    width: 20px;
+  }
+  #into_detail .Input li.form-group .colseI,
+  #into_detail .sheB li.form-group .colseI {
+    display: none;
+  }
+  #into_detail .Input li.form-group:last-child,
+  #into_detail .sheB li.form-group:last-child {
+    border-bottom: none;
+  }
+  #into_detail .Input li p.Verr,
+  #into_detail .sheB li p.Verr {
+    line-height: normal;
+    height: 17px;
+    margin-bottom: .5em;
+  }
+  #into_detail .Input li p.col-xs-offset-2,
+  #into_detail .sheB li p.col-xs-offset-2 {
+    margin-left: 0;
+  }
+  #into_detail .Input .mob_file,
+  #into_detail .sheB .mob_file {
+    position: relative;
+  }
+  #into_detail .Input .mob_file > span,
+  #into_detail .sheB .mob_file > span {
+    margin-left: 0;
+  }
+  #into_detail .Input .mob_file .pc_label,
+  #into_detail .sheB .mob_file .pc_label {
+    display: none;
+  }
+  #into_detail .Input .mob_file .mob_label,
+  #into_detail .sheB .mob_file .mob_label {
+    display: block;
+    float: right;
+  }
+  #into_detail .Input .mob_file .mob_label img,
+  #into_detail .sheB .mob_file .mob_label img {
+    width: 80px;
+    height: 80px;
+  }
+  #into_detail .Input .mob_file .devlue,
+  #into_detail .sheB .mob_file .devlue {
+    float: right;
+    margin-left: 0;
+    margin-top: 85px;
+    margin-right: -80px;
+    width: 80px;
+    word-wrap: break-word;
+    text-align: center;
+  }
+  #into_detail .Input .mob_file > p,
+  #into_detail .sheB .mob_file > p {
+    position: absolute;
+    width: 180px;
+    line-height: 1.5;
+    top: 30px;
+    padding-left: 0;
+    color: #999;
+  }
+  #into_detail .Input .mob_file > span,
+  #into_detail .sheB .mob_file > span {
+    position: absolute;
+    bottom: 0;
+  }
+  #into_detail .Input a.iframeA,
+  #into_detail .sheB a.iframeA {
+    display: block;
+  }
+  #into_detail .Input a.pc_a,
+  #into_detail .sheB a.pc_a {
+    display: none;
+  }
+  #into_detail .Input div.btn[data-toggle='modal'],
+  #into_detail .sheB div.btn[data-toggle='modal'] {
+    display: none;
+  }
+  #into_detail .Input div.col-xs-12,
+  #into_detail .sheB div.col-xs-12 {
+    display: block;
+    cursor: pointer;
+  }
+  #into_detail .Input .divSpan,
+  #into_detail .sheB .divSpan {
+    display: none;
+  }
+  #into_detail .sheB .sheBli {
+    border-bottom: 1px solid #eee;
+    padding-left: 1em;
+  }
+  #into_detail .sheB .sheBli span.left {
+    float: right;
+    margin-right: 1em;
+    line-height: 28px;
+  }
+  #into_detail .sheB .sheBli input {
+    margin-bottom: .5em;
+  }
+  #into_detail .sheB .sheBli > p {
+    float: none;
+    clear: both;
+  }
+  #into_detail .sheB .sheBli:last-child {
+    border-bottom: none;
+  }
+  #into_detail .sheB img {
+    width: 20px;
+    height: 20px;
+  }
+  #into_detail .sheB .sheBf {
+    text-align: center;
+    width: 100%;
+    height: inherit;
+    padding: 5px 0;
+  }
+  #into_detail .sheB hr {
+    margin-bottom: 5px;
+  }
+  #into_detail .img-li {
+    padding: 0 1em;
+  }
+  #into_detail .img-li li {
+    padding: 0;
+    height: 140px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #eee;
+  }
+  #into_detail .img-li li form {
+    float: right;
+    width: 120px;
+    height: 130px;
+    margin-right: 0;
+  }
+  #into_detail .img-li li form div:first-child {
+    width: 120px;
+    height: 130px;
+  }
+  #into_detail .img-li li form .divbtn .btn {
+    margin-left: 5px;
+  }
+  #into_detail .img-li li form .zindex div {
+    margin-left: 0;
+    margin-top: 15%;
+  }
+  #into_detail .img-li li div.left {
+    width: 170px;
+  }
+  #into_detail .img-li li div.left p:first-child {
+    text-align: left;
+  }
+  #into_detail .img-li li div.left .placeH {
+    margin: 1em 0;
+    color: #999;
+    padding: 0;
+    width: 170px;
+  }
+  #into_detail .img-li li div.left > a {
+    position: absolute;
+    bottom: 0;
+    left: 1em;
+  }
+  #into_detail .img-li li div.left a.iframeA {
+    display: block;
+  }
+  #into_detail .img-li li div.left a.pc_a {
+    display: none;
+  }
+  #into_b .btnL {
+    margin-top: 1em;
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+  }
+  #into_b .btnL button {
+    padding: 6px 0;
+  }
+}

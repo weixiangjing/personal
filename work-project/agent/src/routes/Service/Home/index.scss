@@ -1,0 +1,42 @@
+.service-bordered-box{
+  border:1px solid #ececec;
+  padding: 12px 24px;
+  border-radius: 3px;
+  .stat-item{
+    height: 70px;
+    .item{
+      display: inline-block;
+      vertical-align: top;
+
+    }
+    .icon{
+      margin-right: 24px;
+    }
+    .lg-num{
+      font-size: 26px;
+      font-weight: 500;
+      color: #666;
+    }
+    .name{
+      color: #989898;
+    }
+
+
+  }
+  .title-bar{
+    height: 42px;
+    .left-title{
+      float: left;
+      font-size: 16px;
+    }
+    .right-extra{
+      float: right;
+    }
+  }
+}
+
+@media (max-width: 1200px)  and (min-width: 992px){
+  .min-screen{
+    padding-left: 84px;
+  }
+}

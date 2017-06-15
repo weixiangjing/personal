@@ -1,0 +1,111 @@
+<div class="container">
+  <div style="background: #ebecf1">
+    <ul class="breadcrumb">
+      <li>工单服务</li>
+      <li>工单查询</li>
+  </ul>
+  </div>
+  <div class="header">
+    <form action="" onsubmit="return false">
+      <div class="form-group has-feedback row">
+        <select name="wo_type" class="col-xs-5 col-sm-2 form-control" ng-model="woType">
+          <option value="">全部工单</option>
+          <option value="1">进件工单</option>
+          <option value="2">增机工单</option>
+          <option value="3">换机工单</option>
+          <option value="4">配置工单</option>
+        </select>
+        <select name="pay_mode_id" class="col-xs-5 col-sm-2 form-control" ng-model="payId">
+          <option value="">全部支付方式</option>
+          <option value="1006">银行卡</option>
+          <option value="1004">支付宝</option>
+          <option value="1003">微信</option>
+          <option value="1005">百度钱包</option>
+        </select>
+        <input type="text" name="mcode" ng-model="code" placeholder="mcode(必填)" class="col-xs-3 col-sm-2 mcode form-control" required/>
+        <input type="tel" name="salesman_phone" ng-model="mobile" placeholder="业务员手机号(必填)" class="col-xs-4 col-sm-2 phone form-control" minlength="11" maxlength="11" required/>
+        <button class="col-xs-2" ng-click="jump()">查询</button>
+      </div>
+    </form>
+  </div>
+  <div class="table-responsive" ng-if="width>=480">
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>工单号</th>
+      <th>工单类型</th>
+      <th>工单状态</th>
+      <th>MCODE</th>
+      <th>商户名</th>
+      <th>支付方式</th>
+      <th>创建时间</th>
+      <th>最近更新</th>
+      <th>处理时长</th>
+    </tr>
+    </thead>
+    <tbody class=" table-hover">
+    <tr ng-repeat="v in disArr">
+      <td><a href="#/detail/{{v.wo_id}}" ng-click="next()">{{v.work_no}}</a></td>
+      <td>{{v.wo_type |typeNum}}</td>
+      <td ng-if="(v.status==11||v.status==10)&&v.wo_type!=4" style="color: #999">{{v.status | statusNum}}</td>
+      <td ng-if="(v.status==11||v.status==10)&&v.wo_type==4" style="color: #999">待审核</td>
+      <td ng-if="v.status==21" style="color:#393">{{v.status | statusNum}}</td>
+      <td ng-if="v.status==0" style="color:#933">{{v.status | statusNum}}</td>
+      <td ng-if="v.status==12" style="color:#e83;">{{v.status |statusNum}}<br>
+        <a href="../paper/supplementform_h5.html?wo_id={{v.wo_id}}&mcode={{v.mcode}}" target="_blank" ng-if="v.results.length>0">[补件]</a>
+        <a href="../paper/apply.html?wo_id={{v.wo_id}}" target="_blank" ng-if="v.results.length==0&&v.wo_type==1">[补件]</a>
+        <a href="../paper/apply_config.html#/basic?wo_id={{v.wo_id}}" target="_blank" ng-if="v.results.length==0&&v.wo_type==4">[补件]</a>
+      </td>
+      <td>{{v.mcode}}</td>
+      <td>{{v.merchant_name}}</td>
+      <td>{{v.payChannel[0].pay_mode_name||v.paper.ext.pay_mode_list[0]|payNum}}</td>
+      <td style="color: #999">{{v.create_time}}</td>
+      <td style="color: #999">{{v.last_update_time}}</td>
+      <td ng-if="v.status==21||v.status==0"></td>
+      <td ng-if="v.status!=21&&v.status!=0">{{v.date}}</td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  <ul  class="smshow" ng-repeat="v in disArr" ng-if="width<480">
+    <a href="#/detail/{{v.wo_id}}" ng-click="next()">
+    <li>
+      <p>【{{v.num}}】{{v.wo_type |typeNum}}:{{v.work_no}} <span class="right" style="color: #999">{{v.mob_create_time}}</span></p>
+      <hr>
+      <h4 style="display: inline-block">{{v.merchant_name}}</h4>
+      <p><span style="background: #777">{{v.mcode}}</span>
+        <span style="{{v.bgcolr}}">{{v.status | statusNum}}</span>
+        <span ng-if="v.payChannel[0].pay_mode_name=='支付宝'||v.paper.ext.pay_mode_list[0]==1004"><img src="../paper/img/pay_mobao.png" alt=""> </span>
+        <span ng-if="v.payChannel[0].pay_mode_name=='微信'||v.paper.ext.pay_mode_list[0]==1003"><img src="../paper/img/pay_weix.png" alt=""> </span>
+        <span ng-if="v.payChannel[0].pay_mode_name=='银行卡'||v.paper.ext.pay_mode_list[0]==1006"><img src="../paper/img/pay_bank.jpg" alt=""> </span>
+        <span ng-if="v.payChannel[0].pay_mode_name=='百度钱包'||v.paper.ext.pay_mode_list[0]==1005"><img src="../paper/img/pay_baidu.png" alt=""> </span>
+        <span ng-if="v.payChannel[0].pay_mode_name=='不限'||v.paper.ext.pay_mode_list[0]==0" style="color: #333">不限</span>
+        <b class="right">{{v.date}}</b></p>
+    </li>
+    </a>
+  </ul>
+  <div><p style="text-align: center;padding-bottom: 1em" ng-hide="deng">暂无匹配的数据</p></div>
+  <div><div class="tcdPageCode right" style="display: none"></div></div>
+  <div><p class="loadmore">加载更多...</p></div>
+  <div class="alert alert-danger text-center" ng-show="hasshow">
+    <h5>查无数据请确认后，重新查询。</h5>
+  </div>
+  <div class="modal" id="alert">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">提示！</h4>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <button ng-click="top_order()" class="btn" >回到顶部</button>
+</div>
+<div cg-busy="Promise" style="top: -80px;"></div>

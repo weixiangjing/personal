@@ -1,0 +1,26 @@
+
+
+.service-agent-query{
+
+
+  .ant-row{
+    >div{
+      margin: 8px 0;
+      label{
+        &:after{
+          content:":";
+          margin:0 3px;
+        }
+      }
+    }
+  }
+  .item{
+    border-bottom: 1px solid #ececec;
+    padding: 24px 0;
+    .item-title{
+      border-left:3px solid #00b6f0;
+      padding-left: 10px;
+      margin:15px 0;
+    }
+  }
+}

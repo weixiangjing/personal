@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>地图选择(高德)</title>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=b64c4a2400b1e9174de002be0d87bdb5"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/hammer.js"></script>
+    <style>
+        body, html{width: 100%;height: 100%;overflow: hidden;margin:0;}
+        body{font-family:"微软雅黑";}
+        #map{height:100%;width: 100%;}
+        #controls{
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            z-index: 1;
+            width: 70%;
+        }
+        input{
+            padding-left: 5px;
+        }
+        #alert{
+            background: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<div id="controls">
+    <form class="address-search" id="search-form">
+        <div class="input-group">
+            <input class="form-control" autofocus name="address" type="text" value="" id="address"/>
+            <label class="btn btn-info input-group-addon" id="search">查找</label>
+        </div>
+    </form>
+</div>
+<div class="modal" id="alert">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">提示！</h4>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+    function mapAdd() {
+        var address = $('#address');
+        var param = location.search.replace(/^\?/,'');
+        var hammer=new Hammer(document.getElementById("map"));
+        if(param){
+            var arr = param.split('&');
+            var data = {};
+            for(var i=0;i<arr.length;i++){
+                var kv = arr[i].split('=');
+                data[kv[0]] = decodeURIComponent(kv[1]);
+            }
+            param = data;
+        }
+        if(param)address.val(param.address);
+        var map = new AMap.Map('map',{
+            zoom: 11,
+            center: [116.404, 39.915]
+        });
+        AMap.plugin(['AMap.ToolBar','AMap.Scale','AMap.OverView'],
+                function(){
+                    map.addControl(new AMap.ToolBar({position:'RT'}));
+                });
+
+        AMap.service('AMap.Geocoder',function(){//回调函数
+            //实例化Geocoder
+            var geocoder = new AMap.Geocoder();
+            //地理编码
+            function location(addr) {
+                if(!addr)return;
+                window.$PointDetail = null;
+                if(typeof addr == 'object'){
+                    geocoder.getAddress([addr.lng,addr.lat], function (status, result) {
+                        if (status === 'complete' && result.info === 'OK') {
+                            var pos = result.regeocode;
+                            address.val(pos.formattedAddress);
+                            pos.location = addr;
+                        }
+                        callback.apply(this,arguments);
+                    });
+                }else {
+                    geocoder.getLocation(addr,callback);
+                }
+                function callback(status, result) {
+                    if (status === 'complete' && result.info === 'OK') {
+                        var pos = result.regeocode || result.geocodes[0];
+                        map.clearMap();
+                        map.setZoomAndCenter(11,pos.location);
+                        new AMap.Marker({
+                            position: pos.location,
+                            map: map
+                        });
+                        if(pos.adcode)pos.addressComponent.adcode = pos.adcode;
+                        window.$PointDetail = {
+                            formatted_address:pos.formattedAddress,
+                            addressComponent:pos.addressComponent,
+                            location:pos.location
+                        };
+                    }else{
+                        $('#alert').css('display','block');
+                        $('#alert .modal-body').html('地址解析失败，请检查地址输入是否正确。');
+                    }
+                }
+            }
+
+            AMap.plugin(['AMap.Autocomplete'],function(){
+                var autocomplete= new AMap.Autocomplete({input: "address"});
+                $('#search-form').on('submit',function (evt) {
+                    evt.preventDefault();
+                    location(address.val());
+                });
+                $('#search').on('click',function () {
+                    location(address.val());
+                });
+                AMap.event.addListener(autocomplete, "select", function(e){
+                    location(e.poi.location);
+                });
+            });
+            var contextMenu = new AMap.ContextMenu();
+            var selectedAddress = null;
+            contextMenu.addItem("选中地点", function() {
+                location(selectedAddress);
+                selectedAddress = null;
+            }, 0);
+            map.on('rightclick', function(e) {
+                selectedAddress = e.lnglat;
+                contextMenu.open(map, selectedAddress);
+            });
+            hammer.on('press',function () {
+                map.on('click',function (e) {
+                    selectedAddress = e.lnglat;
+                    contextMenu.open(map, selectedAddress);
+                    location(selectedAddress);
+                })
+            });
+            location(address.val());
+        });
+    };
+    $('#alert button').on('click',function () {
+        $('#alert').css('display','none');
+    })
+</script>
+</html>

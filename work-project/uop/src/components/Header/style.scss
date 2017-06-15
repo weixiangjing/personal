@@ -1,0 +1,36 @@
+@import "../../styles/variable";
+
+$avatar-size:36px;
+
+.page-header{
+  background-color: #ffffff;
+  border-bottom: solid 1px $grey_normal;
+  padding: 0 50px;
+  overflow: hidden;
+  .user-nav{
+    float: right;
+    margin-right: 80px;
+    .user-info{
+      cursor: pointer;
+      float: left;
+      margin-left: 15px;
+    }
+    .ant-menu-horizontal{float: left;line-height: 62px;}
+    .avatar{
+      width: $avatar-size;
+      height: $avatar-size;
+      overflow: hidden;
+      border-radius: $avatar-size/2;
+      padding: $design-gutter;
+      border: solid 1px $grey_normal;
+      background: center no-repeat;
+      background-size: $avatar-size*0.5;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: $design-gutter;
+    }
+    .user-name{
+      cursor: pointer;
+    }
+  }
+}

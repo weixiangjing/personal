@@ -1,0 +1,35 @@
+.cashier-profit-list{
+}
+.new-profit-dialog{
+
+  .ant-select{
+    margin-left: 0;
+  }
+  .input-group{
+    .ant-row{
+      margin-bottom: 8px !important;
+    }
+    .text-right{
+      padding-top: 8px;;
+    }
+  }
+
+  .col-input-item{
+    margin-left: 60px;
+  }
+  .h-form-2{
+
+    input{
+      width: 150px;
+    }
+    >.ant-row{
+     display: inline-block;
+     width: 50%;
+      >div{
+        &:last-child{
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

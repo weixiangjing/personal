@@ -1,0 +1,56 @@
+.print-manager-preview{
+  .inline-form-item{
+    overflow: hidden;
+    .ant-row{
+      float: left;
+      margin-right: 12px;
+    }
+  }
+  .channel-print-drop-item{
+    img{
+      height: 72px;
+    }
+  }
+  .preview-container{
+    padding: 12px;
+    width: 344px;
+    background: #ECECEC;
+  }
+  .preview-wrapper{
+    padding: 12px;
+    background: #ffffff;
+  }
+  .print-template-items{
+    margin-top: 24px;
+    overflow: hidden;
+    li{
+      border:1px solid #ececec;
+      position: relative;
+      width: 200px;
+      overflow: hidden;
+      height: 52px;
+      padding: 12px;
+      border-radius: 3px;
+      padding-bottom: 15px;
+      color: #666666;
+      float: left;
+      margin-bottom: 15px;
+      margin-right: 12px;
+      &.selected{
+        background: #108de9 !important;
+        color: #ffffff;
+        border-color: #108de9;
+      }
+      &.custom{
+        background: #fffcee;
+        border:1px solid #ffca77;
+      }
+      &:hover{
+        background: #108de9;
+        cursor: pointer;
+        color: #ffffff;
+        border-color: #108de9;
+      }
+    }
+  }
+}

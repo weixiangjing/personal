@@ -1,0 +1,33 @@
+.combox-select-input{
+  border: 1px solid #ececec;
+  display: table;
+  border-radius: 3px;
+  width: 100%;
+  .ant-select-selection{
+    border:none;
+    border-radius: 0;
+    width: 100px;
+
+    &:focus{
+      box-shadow: none;
+    }
+  }
+  .ant-form-item{
+    margin-bottom: 0px;
+  }
+
+
+  input{
+    border:none;
+    &:focus{
+      box-shadow: none;
+    }
+  }
+  >div{
+
+    display: table-cell;
+    &:first-child{
+      width: 100px;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.service-cart-detail{
+  .cart-tabs{
+    .item{
+      border-bottom: 1px solid #ececec;
+      padding: 24px;
+      .title{
+        padding-left: 12px;
+        border-left: 2px solid #f90;
+        margin-bottom: 12px;
+      }
+      .desc{
+        padding-left: 12px;;
+      }
+      &:last-child{
+        border:none;
+      }
+    }
+
+  }
+  .goods-content{
+    position: relative;
+    padding: 24px 0;
+    padding-left: 152px;
+  }
+  .left-icon{
+    height: 128px;
+    width: 128px;
+    position: absolute;
+    left:0;
+
+  }
+  .right-content{
+    .ant-col-12{
+      padding: 8px 0;
+      color: #989898
+
+    }
+    label{
+      width: 70px;
+      text-align: right;
+      margin-right: 24px;
+      display: inline-block;
+    }
+    .title{
+      font-size: 16px;
+      color: #666666;
+    }
+  }
+
+}
+
+.animate-moving-product{
+  position: absolute;
+  display: block;
+  border:0;
+  color: #989898;
+  background: none;
+  transition: left 300ms ease-in,top 300ms linear
+}
+.animate-complete-product{
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  background: rgba(255,255,255,0.7) !important;
+  position: absolute;
+  background: none;
+  color: #ff0000;
+  border: 0;
+  transform-origin: center;
+  transition: transform 300ms ease-in;
+
+}

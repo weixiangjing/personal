@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="../paper/css/bootstrap.min.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="../icon/favicon-72x72.png">
+  <title>配置参数说明</title>
+  <style>
+    body{
+      background: #ddd;
+      margin: 0;
+      padding-top: 20px;
+    }
+    ul,ol,li{
+      list-style: none;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      overflow: hidden;
+    }
+    h2{
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    li p{
+      text-align: center;
+    }
+    .left{
+      float: left;
+    }
+    div>p{
+      margin-left: 15px;
+    }
+    #locations li.left{
+      height: 300px;
+      margin-right: 10px;
+      text-align: center;
+    }
+    li{
+      position: relative;
+    }
+    b{
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 50px;
+      padding: 5px 0;
+      text-align: center;
+      color: #fff;
+      background: rgba(100, 100, 100, 0.7);
+    }
+    img{
+      border: 1px solid #ddd;
+    }
+    #center{
+      width: 80%;margin-left: 10%;background: #fff;padding: 10px;
+    }
+    @media screen and (max-width: 480px){
+      .tipsTow{
+        margin-left: 0;
+      }
+      ul{
+        padding-left: 10px;
+      }
+      h2{
+        font-size: 18px;
+      }
+      #center{
+        width: 98%;
+        margin-left:1%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="center">
+  <div id="add_device_desc">
+    <h2>银行卡支付-通道增机说明书</h2>
+    <ul>
+      <li>1.JF06(杉德)通道&nbsp;&nbsp;&nbsp;增机说明书（<a href="docs/杉德增机申请表.doc" target="_blank">模板下载</a>）</li>
+    </ul>
+    <ul>
+      <li>2.JF03&nbsp;&nbsp;&nbsp;通道增机说明书（<a href="docs/JF03增机情况说明书.docx" target="_blank">模板下载</a>）</li>
+    </ul>
+    <ul>
+      <li>3.JF02&nbsp;&nbsp;&nbsp;通道增机说明书（<a href="docs/JF02增机情况说明书.docx" target="_blank">模板下载</a>）</li>
+      <li><img src="images/zengjis.png" alt="" class="img-responsive"><b>示例</b></li>
+      <li style="background: #FFF7B2;padding: 10px;clear: both">Tips：情况说明需盖公章，个体无公章可法人盖手印</li>
+    </ul>
+  </div>
+  <div id="wx_config">
+    <h2>自有微信配置申请表</h2>
+    <p>1.自有微信（服务商）配置申请表，示例如下：</p>
+    <p>自有微信配置申请表（<a href="docs/自有微信（服务商）配置申请表.docx" target="_blank">模板下载</a>）</p>
+    <ul>
+      <li><img src="images/jietu_03.jpg" alt="" class="img-responsive"><b>示例</b></li>
+    </ul>
+    <p id="wx_account_screenshot">2.微信账号信息截图，示例如下：</p>
+    <ul>
+      <li><img src="images/jietu_07.jpg" alt="" class="img-responsive"><b>示例</b></li>
+    </ul>
+  </div>
+  <div id="wx_change_paychannel">
+    <h2>支付通道变更说明书</h2>
+    <ul>
+      <li>当商户的支付通道的接入变更时，需要提供变更说明书，示例如下 &nbsp;&nbsp;&nbsp;（<a href="docs/业务变更申请书（外部模板）.docx" target="_blank">模板下载</a>）</li>
+      <li><img src="images/weixin_2.jpg" alt="" class="img-responsive"><b>示例</b></li>
+      <li style="background: #FFF7B2;padding: 10px;clear: both">Tips：变更原因描述必须填写进件方式、进件日期、mcode、商户名称及变更原因</li>
+    </ul>
+  </div>
+  <div id="alipay_3rd_isv_config">
+    <h2>支付宝第三方ISV配置说明</h2>
+    <ul>
+      <li>当商户使用微智金服以外的支付宝ISV申请的参数进行配置时，请参考以下配置说明文档 &nbsp;&nbsp;&nbsp;（<a href="docs/alipay_3rd_isv_config_v1.0.2.docx" target="_blank">ISV配置旺POS收银指引</a>）</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+@import "../../styles/variable";
+
+.header{
+  .fa-user-circle{
+    font-size: 30px;
+    color: #cccccc;
+    float: right;
+    margin-left: 14px;
+    margin-top: 16px;
+  }
+  >div{
+    &:first-child{
+      >div{
+        &:first-child{
+          height: 2px !important;
+          background: #ffffff !important;
+        }
+
+      }
+
+    }
+  }
+  height: $page-header-height;
+  background: #3f3f3f;
+  .cart-num{
+    position: absolute;
+    font-size: 12px;
+    background: #ff0000;
+    color: #ffffff;
+    padding: 0 6px;
+    font-style: normal;
+    border-radius: 32px;
+    line-height: 18px;
+    display: block;
+    right: -5px !important;
+    top:-1px !important;
+  }
+
+  .title{
+    color: #f2f2f2;
+    font-size: 14px;
+  }
+  .cart{
+    float: right;
+    margin-left: 14px;
+    font-size: 28px;
+    color: #f1f1f1;
+    border-left: 1px solid #f1f1f1;
+    height: 42px;
+    line-height: 42px;
+    margin-top: 12px;
+    position: relative;
+    width: 50px;
+    i{
+      position: absolute;
+      top:6px;
+      right: 6px;
+    }
+    span{
+      font-size: 12px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+      height: 12px;
+      line-height: 12px;
+    }
+  }
+  .ant-menu-item{
+    font-size: 14px;
+  }
+  >div:first-child{
+    position: fixed;
+    width:100%;
+    top:0;
+    left:0;
+
+
+  }
+
+  .logo{
+    margin-top: 15px;
+  }
+  .ant-menu-dark{
+    border-bottom: none;
+  }
+
+  //background: $page-header-bg-color;
+  .main-nav{
+    float: right;
+  }
+  h1{
+    margin: 3px 0;
+    font-weight: 100;
+  }
+}
+.ant-menu-dark{
+  //background: transparent;
+}

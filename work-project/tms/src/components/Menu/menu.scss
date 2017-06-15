@@ -1,0 +1,10 @@
+@import "../../styles/variable";
+
+.slide-bar {
+  background: transparent;
+  width: $menu_width;
+}
+.ant-menu-item.final{
+  padding-left: 2px !important;
+}
+

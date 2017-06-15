@@ -1,0 +1,28 @@
+
+@import "../../../styles/variable";
+.inq-rule-list{
+  .rule-detail-btn{
+    vertical-align: middle;
+  }
+  >div{
+    padding-left: 15px;
+    width: 160px;;
+
+      border-right: 1px solid $grey_normal;
+
+    &:last-child{
+      border-right:none;
+  }
+
+}
+
+}
+.rule-search-form{
+  .inline-input-group{
+    label{
+      width: 100px;
+      display: inline-block;
+      text-align: right;
+    }
+  }
+}

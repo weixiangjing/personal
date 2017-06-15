@@ -1,0 +1,27 @@
+.myform{
+
+  .ant-calendar-picker{
+    width: 100%;
+  }
+  .ant-form-item-label > label{
+    display: inline;
+  }
+  .form-action{
+   margin-bottom: 15px;
+  }
+  .ant-select-selection__rendered ul{margin-bottom: 0}
+}
+.data-table{
+  padding: 8px 0;
+}
+.log-modal{
+  min-width: 550px;
+  .log ul li{
+    margin-bottom: 10px;
+    font-size: 14px;
+    color:#999;
+    textarea.ant-input{vertical-align: top;}
+    //.ant-input{width: 88%}
+  }
+  .log .json-view ul li{margin: 0;font-size: 12px}
+}

@@ -1,0 +1,190 @@
+@import "../../../styles/common";
+@import "../../../styles/variable";
+
+.cashier-home{
+  .trade-home-rank{
+    .ant-table-tbody{
+      .ant-table-row{
+        &:last-child{
+          td{
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+    .ant-table-placeholder{
+      border-bottom: 0;
+    }
+    .ant-col-8{
+      border-right: 1px solid #ececec;
+      padding-bottom: 15px;
+      &:last-child{
+        border-right:0;
+      }
+    }
+  }
+  .lg-card-body{
+    .ant-col-6{
+      &:nth-child(2){
+        border-right: 1px solid #ececec;
+      }
+    }
+  }
+  .ant-card-extra{
+    top:8px;
+  }
+  .small-table{
+
+    tr{
+      &:last-child{
+        td{
+          border-bottom: none;
+        }
+      }
+    }
+    .text-right{
+      padding-right: 8px;
+    }
+    .ant-table-thead{
+
+      th{
+        padding: 12px 0;
+        &:last-child{
+
+          text-align: right;
+          padding-right: 8px;
+        }
+        &:first-child{
+         span{
+           visibility: hidden;
+         }
+        }
+      }
+    }
+    td,th{
+      padding: 7px 0;
+      background: #ffffff;
+      border-bottom:1px solid #ececec;
+      padding-left:8px;
+
+    }
+  }
+  .ant-input{
+    border:none;
+    box-shadow: none;
+  }
+  .ant-select-selection{
+    border:none;
+    box-shadow: none;
+
+  }
+  .circle{
+    width: 12px;
+    height: 12px;
+    @include radius(12px);
+    background: $grey;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+  .ant-card{
+    margin-bottom: 15px;
+  }
+  .today-data{
+    border-right: 1px solid $grey;
+  }
+
+  .data-text{
+    margin-left: 15px;
+    margin-top: 5px;
+    .d-number{
+      font-size: 22px;
+      font-weight: 400;
+    }
+    .d-title{
+      color: #989898;
+    }
+  }
+  .data-item{
+
+    .data-icon,.data-text{
+      float: left;
+    }
+    .data-icon{
+
+      width:64px;
+      height: 64px;
+
+    }
+
+  }
+}
+//['#f00','#ff9900','#cc0']
+.level-tag{
+  padding: 3px 6px;
+  @include radius(2px);
+  color: #989898;
+  background: #ffffff;
+
+
+}
+.level-tag-1{
+  background: #f00;
+  color: #ffffff
+}
+.level-tag-2{
+  background: #ff9900;
+  color: #ffffff
+}
+.level-tag-3{
+  background: #cc0;
+  color: #ffffff
+}
+.lg-card-body{
+  .ant-card-body{
+    padding: 36px 24px;
+  }
+}
+.card-radio-group-extra{
+  .ant-card-body{
+    padding: 0px 24px;
+  }
+}
+
+.data-text-icon{
+  width:56px;
+  height: 56px;
+  background:#23ccfd;
+  display: inline-block;
+  border-radius: 56px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 56px;
+  float: left;
+}
+.trade-home-rank{
+
+  .ant-row{
+    >div{
+      border-right: 1px solid #ececec;
+      &:last-child{
+        border-right: 0;
+      }
+    }
+  }
+  .ant-table-thead{
+    color: #989898;
+  }
+  .ant-calendar-picker{
+    width: 100px;
+  }
+  .rank-tab-bar{
+
+    padding: 12px 0;
+  }
+  .ant-none-border{
+
+  }
+ .ant-calendar-picker-input{
+   color: #00b3ee;
+ }
+}

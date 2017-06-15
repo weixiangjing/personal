@@ -1,0 +1,32 @@
+.liquidate-search{
+  .data-group-item{
+    &:first-child{
+      >.data-item-icon{
+        &:first-child{
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+  
+  .settle-item{
+    .bg-default{
+      color: #666666;
+    }
+    >div{
+      border-right: 1px solid #ececec;
+      padding-left: 12px;
+      &:first-child{
+        padding-left: 0;
+      }
+      &:nth-child(n+4){
+        border-right: none;
+      }
+    }
+
+  }
+  .font-md{
+    font-weight: 500;
+  }
+
+}

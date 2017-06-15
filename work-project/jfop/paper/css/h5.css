@@ -1,0 +1,163 @@
+body {
+  padding-bottom: 2em;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.clear {
+  clear: both;
+
+}
+.log {
+  background-color: #5DB6EA;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 888;
+}
+.log h5 {
+  margin: 0;
+  padding-left: 1em;
+  line-height: 60px;
+  font-size: 1.5em;
+  color: #fff;
+}
+.log div {
+  line-height: 60px;
+  padding-right: 1em;
+}
+.log div button {
+  border: 1px solid #fff;
+}
+input,
+textarea {
+  padding-left: 5px;
+}
+#submit div span {
+  color: red;
+}
+#submit p {
+  padding: 0 1em;
+}
+#submit p span {
+  color: #6CBFE6;
+}
+#submit div:not(.log) {
+  padding: 0 1em;
+}
+#submit div.row {
+  padding: 0;
+}
+#submit div.row p {
+  line-height: 34px;
+  padding-right: 0;
+  margin: 0px;
+}
+#submit div.row p span {
+  color: #ddd;
+}
+#submit div.row p b {
+  color: #000;
+  margin-left: -0.6em;
+  padding-right: .5em;
+}
+.file {
+  overflow: hidden;
+  padding: 0 1em;
+}
+.file form:last-child {
+  border-bottom: none;
+}
+.file form {
+  border-bottom: 1px solid #ddd;
+  padding-top: 0.5em;
+  overflow: hidden;
+}
+.file form div {
+  overflow: hidden;
+}
+.file label span {
+  color: red;
+}
+.file button {
+  border: 2px solid transparent;
+}
+.file span {
+  position: relative;
+}
+.file span div {
+  position: absolute;
+  top: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  width: 80px;
+  height: 80px;
+}
+.file span p {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 80px;
+  border-radius: 1px;
+  text-shadow: 0 1px #ddd;
+  background: rgba(250, 250, 250, 0.5);
+  display: none;
+}
+.file span img {
+  height: 80px;
+  width: 80px;
+}
+.file .zindex {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+.file .zindex p {
+  display: none;
+}
+.file .zindex img {
+  margin: 200px auto;
+}
+@media screen and (max-width: 480px) {
+  .file .zindex img {
+    width: 100%;
+    margin: 40% auto;
+  }
+}
+.msg,
+.pic {
+  position: absolute;
+  z-index: 99;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+}
+.msg div,
+.pic div {
+  margin-top: 15%;
+  width: 50%;
+  background: #fff;
+  padding: 5% 0;
+  margin-left: 25%;
+  border-radius: 30px;
+}
+@media screen and (max-width: 480px) {
+  .msg div,
+  .pic div {
+    margin-top: 30%;
+  }
+}
+#alert {
+  background: rgba(0, 0, 0, 0.7);
+}

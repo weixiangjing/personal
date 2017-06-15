@@ -1,0 +1,9 @@
+@import "../../../styles/variable";
+
+#set-password-page{
+  .form-content{
+    width: 300px;
+    margin: auto;
+    padding: $design-gutter*5 0;
+  }
+}

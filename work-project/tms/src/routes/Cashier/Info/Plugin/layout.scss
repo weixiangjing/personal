@@ -1,0 +1,110 @@
+
+@import "../../../../styles/common";
+.cashier-plugin{
+
+  .card-item-add{
+    >span{
+      text-align: center;
+      line-height: 210px;
+      display: block;
+      border:1px solid #ECECEC;
+      @include radius(2px);
+
+      i{
+        font-size: 72px;
+        color: #989898;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+  .card-group{
+
+    >div{
+      height: 220px;
+      margin-bottom: 15px;
+     .ant-card-bordered{
+       height: 100%;
+     }
+    }
+    .add-icon{
+      >div{
+        border: 1px solid #ececec;
+        width: 100%;
+        height: 100%;
+        font-size: 72px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+  .plugin-title{
+    margin-bottom:25px;
+    .title{
+      font-size: 18px;
+      font-weight: 500;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 12px;
+    }
+
+    .title-btn{
+      margin-right: 8px;
+    }
+
+  }
+
+
+  .p-item{
+    margin: 8px 0;
+    .pt-title{
+      width: 100px;
+      display: inline-block;
+      *{
+        color: #989898;
+      }
+      
+    }
+  }
+  .card-action{
+    i{
+      margin:0 8px;
+      font-size: 16px;
+    }
+  }
+}
+
+
+.m-group{
+  > label{
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+    padding-right: 5px;
+  }
+  .ant-form-item-label{
+    vertical-align: top;
+  }
+  .ant-select{
+    width: 300px;
+  }
+  >div{
+    display: inline-block;
+    input,textarea{
+      width: 300px;
+    }
+
+    label{
+      display: inline-block;
+      width:100px;
+    }
+  }
+}

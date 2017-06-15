@@ -1,0 +1,88 @@
+.common-print-model-visual{
+
+
+  .drop-active-control-item{
+    color: #2db7f5;
+  }
+  width: 900px;
+  .visual-container{
+    background: #ececec;
+    overflow: hidden;
+    border:1px solid #ececec;
+    position: relative;
+
+  }
+
+  .drag-items{
+    .common-draggable-item {
+      &:before{
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        background: #88d068;
+        position: absolute;
+        top: 14px;
+      }
+    }
+    width: 150px;
+    background: #ffffff;
+    padding: 12px;
+    height: 100%;
+    position: absolute;
+    &.mode-1{
+      display: none;
+    }
+  }
+  .drop-items{
+
+    .ant-alert-with-description{
+      padding-left: 54px;
+    }
+      width: 344px;
+    background: #dddddd;
+    padding: 12px;
+    margin-left: 150px;
+    min-height: 500px;
+    transition: all 200ms;
+    .bar-code,.qr-code{
+      height: 72px;
+    }
+    &.mode-1{
+      width: 900px;
+      margin-left: 0;
+    }
+
+    >div{
+      background: #ffffff;
+      padding: 12px;
+    }
+
+  }
+  .inspect-items{
+    width: 400px;
+
+    .ant-anchor-wrapper{
+      background: #ececec;
+    }
+    .print-inspector-item{
+      padding: 12px;
+      textarea{
+        vertical-align: top;
+        width: 320px;
+      }
+      >label{
+        margin-right: 8px;
+      }
+    }
+  }
+  .disabled-layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+
+  }
+}

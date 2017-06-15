@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="icon" type="image/png" sizes="16x16" href="../icon/favicon-72x72.png">
+  <title>H5补件</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/h5.css" rel="stylesheet">
+</head>
+<body>
+
+<form action="" method="post" onsubmit="return false" id="submit" name="paper">
+  <div class="form-group log">
+    <h5 class="left">请完善商户进件资料</h5>
+    <div class="right">
+      <button class="btn btn-info">提交</button>
+    </div>
+  </div>
+
+  <p style="margin-top: 75px">你拓展的<span class="merchants-name"></span>,资料审核未通过。</p>
+  <p class="remark" style="color: red;word-wrap: break-word;"></p>
+  <p class="num">请重新提交以下<span></span>项内容：</p>
+</form>
+<div class="file">
+</div>
+<div class="msg">
+  <div>
+    <img src="img/success2.png" alt="">
+    <br><br>
+    <p></p>
+  </div>
+</div>
+<div class="pic">
+  <div>
+    <img src="img/Fail.png" alt="" style="width:70px;height:70px">
+    <br><br>
+    <p>链接失败</p>
+    <p>如有问题，请咨询客服</p>
+    <p><a href="tel:028-69296292">028-69296292</a></p>
+  </div>
+</div>
+<div class="modal" id="alert">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">提示！</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquerymd5.min.js"></script>
+<script src="js/jquerForm.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/h5form.js"></script>
+
+</body>
+</html>

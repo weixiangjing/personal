@@ -1,0 +1,41 @@
+
+li{
+  list-style: none;
+}
+
+a:hover,a:link,a:visited,a:focus,a:active{
+  text-decoration:none !important;
+}
+
+.ant-card-head-title{
+  margin: 0 !important;
+}
+.ant-menu{
+  background: none;
+  border-bottom:0;
+}
+.ant-input-number{
+  min-width: 110px;
+}
+.ant-alert-description{
+  word-break: break-all;
+}
+
+.ant-message-notice{
+  .ant-message-notice-content{
+    box-shadow:-1px 3px 20px 1px rgba(0,0,0,.2);
+    padding:18px 60px;
+    .anticon{
+      font-size: 28px;
+      vertical-align: middle;
+    }
+    span{
+      vertical-align: middle;
+      font-size: 14px;
+      font-weight: 500;
+      color: #666666;
+    }
+
+
+  }
+}

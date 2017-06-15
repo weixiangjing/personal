@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>代理商分期收银系统</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>if(!('Promise' in window)){document.write('<script src="/play/lib/polyfill.min.js"><\/script>')}</script>
+  <%if(__DEV__){%>
+  <script type="text/javascript" src="/__vendor.dev.js"></script>
+  <%}%>
+  <link rel="stylesheet" href="/play/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/play/lib/animate/animate.css">
+  <style>body.loading{background-color: #ffffff} body.loading .root{opacity: 0;visibility: hidden} body.loaded #app-spinner{display: none}
+    html,body{
+        height: 100%;
+    }
+    #app-spinner{
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -webkit-align-items: center;
+    }
+  </style>
+</head>
+<body class="loading">
+  <div id="app-spinner" align="center">
+      <img  src="/baozi.gif" >
+  </div>
+  <div id="root" style="height: 100%"></div>
+
+</body>
+<script type="text/javascript">
+  window.onload = function () {
+      document.body.className = 'loaded'
+  }
+</script>
+</html>

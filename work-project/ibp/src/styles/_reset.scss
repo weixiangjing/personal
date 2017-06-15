@@ -1,0 +1,19 @@
+
+li{
+  list-style: none;
+}
+
+a:hover,a:link,a:visited,a:focus,a:active{
+  text-decoration:none !important;
+}
+
+.ant-card-head-title{
+  margin: 0 !important;
+}
+.ant-menu{
+  background: none;
+  border-bottom:0;
+}
+.ant-input-number{
+  min-width: 110px;
+}

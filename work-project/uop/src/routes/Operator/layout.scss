@@ -1,0 +1,91 @@
+@import "../../styles/variable";
+@import "../../styles/mixin";
+$transition-duration:800ms;
+
+.page-operator{
+  .page-center-content{
+    background-color: #ffffff;
+    position: relative;
+    width: $body-width;
+    margin: auto;
+    border-radius: 5px;
+    height: $body-height;
+    overflow: hidden;
+    .page-nav{
+      @include transition(all, $transition-duration);
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: $nav-width-lg;
+      padding: $design-gutter;
+      background:#0096E5 url("/play/img/bg-baozi.png") center no-repeat;
+      background-size: cover;
+      overflow: hidden;
+    }
+    .page-paper{
+      @include transition(all, $transition-duration);
+      margin-left: $nav-width-lg;
+      padding: $design-gutter-large;
+      height: 100%;
+    }
+    .page-body{
+      height: $body-height - $footer-height;
+      overflow: auto;
+      .page-title{
+        font-size: 26px;
+        color: #108ee9;
+        margin-top: 0;
+        padding: 8px 24px 24px 8px;
+      }
+    }
+    .paper-footer{
+      height: $footer-height;
+    }
+    &.fold{
+      .page-nav{
+        width: $nav-width;
+      }
+      .page-paper{
+        margin-left: $nav-width;
+      }
+    }
+  }
+}
+.concise-form{
+  .error-tip{
+    height: 34px;
+  }
+  .ant-form-item-control{
+    .input-icon{
+      font-size: 20px;
+      color: $dark-grey;
+    }
+    .ant-input-affix-wrapper .ant-input{
+      padding-left: 35px;
+      font-size: 14px;
+      height: 36px;
+      border: none;
+      outline: none;
+      -webkit-appearance: none;
+      border-radius: 0;
+      border-bottom: solid 1px $grey;
+      &:focus{
+        outline: none;
+        box-shadow: none;
+        border-color: #83d4fb;
+      }
+    }
+    &.has-error{
+      .ant-form-explain{
+        color: $error-color;
+      }
+      .input-icon{
+        color: $error-color;
+      }
+      .ant-input{
+        border-color: $error-color;
+      }
+    }
+  }
+}

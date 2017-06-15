@@ -1,0 +1,51 @@
+@import "../../styles/variable";
+
+$avatar-size:36px;
+.app-comp-header{
+  background: #fff;
+  border-bottom: solid 1px $deep_grey;
+  .logo{
+    >img{
+      width: 32px;
+      height: 32px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: $design-gutter;
+    }
+    >h1{
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0;
+      margin: 0;
+      font-size: 15px;
+      color: $dark-grey;
+      font-weight: normal;
+    }
+  }
+  .header-content{
+    position: relative;
+    padding: 0 50px;
+    .right-tool{
+      position: absolute;
+      right: 50px;
+      top : 0;
+      bottom: 10px;
+      .user-info{
+        cursor: pointer;
+      }
+      .avatar{
+        width: $avatar-size;
+        height: $avatar-size;
+        overflow: hidden;
+        border-radius: $avatar-size/2;
+        padding: $design-gutter;
+        border: solid 1px $grey;
+        background: center no-repeat;
+        background-size: $avatar-size*0.5;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: $design-gutter;
+      }
+    }
+  }
+}

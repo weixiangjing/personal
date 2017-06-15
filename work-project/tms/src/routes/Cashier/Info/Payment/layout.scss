@@ -1,0 +1,46 @@
+@import "../../../../styles/common";
+
+
+.channel-list{
+  .common-table{
+    margin-top: 24px;
+  }
+  .collapse-icon{
+    position: absolute;
+    right:10px;
+    top:10px;
+  }
+ .search-label{
+   width: 120px;
+   display: inline-block;
+   margin-right: 15px;
+   text-align: right;
+   vertical-align: middle;
+
+ }
+  .normal-input{
+    width: 300px;
+    margin-left: 30px;
+  }
+
+  .channel-action{
+    a{
+      margin-right: 10px;
+    }
+  }
+  .channel-records{
+    .ant-table-content>div>span{
+      display: block;
+    }
+  }
+  .channel-create{
+    overflow: hidden;
+    margin-bottom: 10px;
+    .ant-btn{
+      float: right;
+    }
+  }
+
+
+
+}

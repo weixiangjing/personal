@@ -1,0 +1,601 @@
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+body {
+    padding: 20px 0;
+    background: #ebecf1;
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+.clear {
+    clear: both;
+}
+.header hr {
+    margin: 0 -2em;
+}
+.breadcrumb {
+    margin-bottom: 10px;
+    padding: 0;
+}
+form {
+    background: #fff;
+}
+form > div {
+    padding: 0 15px;
+}
+form > div p > span {
+    font-size: 14px;
+    margin-right: 1em;
+}
+form .img-li > p {
+    color: #FFB268;
+    font-size: 12px;
+    background: #FFEDDC;
+    border: 1px solid #FFB268;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+form .form-group {
+    padding-top: 15px;
+}
+form .form-group > h4 {
+    margin: 1em 0;
+    position: relative;
+}
+form .form-group > h4 span {
+    position: absolute;
+    display: inline-block;
+    width: 5px;
+    height: 19px;
+    bottom: 0;
+    background: #FFA115;
+}
+form .form-group > h4 p {
+    margin-left: 10px;
+    display: inline-block;
+    color: #333;
+    font-weight: bold;
+}
+form .jinJ > p {
+    float: left;
+    padding-right: 1em;
+    text-align: right;
+    line-height: 38px;
+}
+form .jinJ .signing,form .jinJ .signingUl{display: none;}
+form .jinJ .pay,
+form .jinJ .zhif_sold,
+form .jinJ .companyX,
+form .jinJ .sold,
+form .jinJ .signingUl
+{
+    margin-bottom: 1em;
+    overflow: hidden;
+}
+form .jinJ .pay .actv,
+form .jinJ .zhif_sold .actv,
+form .jinJ .companyX .actv,
+form .jinJ .sold .actv,form .jinJ .signingUl .actv {
+    border: 1px solid #00ADEF;
+    background: #EBFAFF;
+}
+form .jinJ .pay li,
+form .jinJ .zhif_sold li,
+form .jinJ .companyX li,
+form .jinJ .sold li ,form .jinJ .signingUl li{
+    float: left;
+    margin-right: 2em;
+    border: 1px solid #ddd;
+    line-height: 26px;
+    text-align: center;
+    padding: 2px;
+    margin-bottom: .5em;
+    border-radius: 3px;
+}
+form .jinJ .pay li label,
+form .jinJ .zhif_sold li label,
+form .jinJ .companyX li label,
+form .jinJ .sold li label ,form .jinJ .signingUl li label{
+    width: 130px;
+    margin-bottom: 0;
+}
+form input,
+form select,
+form textarea {
+    margin-right: 1em;
+    padding: 2px 5px;
+    margin-bottom: 1em;
+}
+form label:hover {
+    cursor: pointer;
+}
+form button {
+    line-height: 28px;
+}
+form .img-li {
+    overflow: hidden;
+}
+form .img-li input {
+    display: none;
+}
+form .img-li li {
+    float: left;
+    text-align: center;
+    height: 300px;
+    position: relative;
+}
+form .img-li li form {
+    margin: 5px 1em 5px 0;
+    overflow: hidden;
+    position: relative;
+    width: 180px;
+    height: 240px;
+}
+form .img-li li form > div {
+    padding: 0;
+}
+form .img-li li form div:first-child {
+    position: absolute;
+    top: 0;
+    width: 180px;
+    height: 240px;
+    background: #777;
+}
+form .img-li li form div:first-child div {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+form .img-li li form .divbtn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #666;
+    padding: 5px 0;
+    display: none;
+    z-index: 999;
+}
+form .img-li li form .divbtn .btn {
+    width: 32px;
+    padding: 5px;
+    margin-left: 10px;
+    background: #fff;
+    float: left;
+    border-radius: 20px;
+}
+form .img-li li form .divbtn .add {
+    margin-left: 25%;
+}
+form .img-li li p.placeH {
+    position: absolute;
+    top: 20%;
+    width: 180px;
+    padding: 0 6px;
+    color: #aaa;
+    font-size: 12px;
+}
+form .img-li li div.left {
+    width: 180px;
+}
+form .img-li li div.left p:first-child {
+    text-align: center;
+}
+form .img-li li div.left a.iframeA {
+    display: none;
+}
+form .input-group-addon {
+    padding: 2px 5px;
+}
+form .salesman ul li label {
+    display: none;
+}
+form .sheB_after {
+    display: none;
+}
+#into input[type="radio"] {
+    display: none;
+}
+#into {
+    padding-bottom: 1em;
+}
+#into .sheB li span {
+    cursor: pointer;
+    line-height: 34px;
+}
+#into .sheB li:first-child {
+    height: 35px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+#into .sheB li:first-child img {
+    cursor: pointer;
+}
+#into .sheBli {
+    position: relative;
+}
+#into .sheBli .suggest {
+    position: absolute;
+    border: 1px solid #ccc;
+    display: none;
+    top: 35px;
+    z-index: 99;
+    background: #fff;
+}
+#into .sheBli .suggest ul {
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+}
+#into .sheBli .suggest ul li {
+    cursor: pointer;
+    height: 35px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+#into .sheBli .suggest ul li:last-child {
+    border-bottom: none;
+}
+#into .sheBli .suggest ul li:hover {
+    background: #eee;
+}
+#into .sheBli label {
+    display: none;
+}
+#into .sheB p {
+    line-height: 34px;
+    margin-left: 5px;
+    color: red;
+}
+#into .sheB p img {
+    width: 28px;
+    height: 28px;
+}
+#into label img {
+    margin-right: 0.5em;
+}
+#into button {
+    width: 20%;
+    margin-left: 40%;
+}
+#into .ref {
+    background: #FFFFCC;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    padding: 1.5em;
+    padding-bottom: 0.5em;
+    clear: both;
+}
+#into .ref p {
+    margin-bottom: 1em;
+}
+#into .ref label {
+    display: none;
+}
+#into_detail input,
+#into_detail textarea,
+#into_detail select {
+    margin-right: 0;
+}
+#into_detail .Input label {
+    color: #999;
+    font-weight: normal;
+}
+#into_detail .Input .form-group {
+    margin: 0;
+    margin-right: 0;
+    padding-top: 5px;
+}
+#into_detail .Input .control-label {
+    padding-right: 1em;
+    line-height: 34px;
+    padding-top: 0;
+}
+#into_detail .Input .control-label a.iframeA {
+    display: none;
+}
+#into_detail .Input li {
+    clear: both;
+}
+#into_detail .Input li label span {
+    color: red;
+    margin-right: 2px;
+}
+#into_detail .Input li > a {
+    margin-left: .5em;
+    line-height: 34px;
+    float: left;
+}
+#into_detail .Input li > a img {
+    width: 28px;
+    height: 28px;
+}
+#into_detail .Input li p {
+    line-height: 34px;
+    float: left;
+    padding: 0 1em;
+    margin-bottom: 15px;
+    color: red;
+}
+#into_detail .Input li p img {
+    width: 28px;
+    height: 28px;
+}
+#into_detail .Input li div.btn[data-toggle='modal'] {
+    height: 34px;
+    margin-left: 1em;
+    margin-bottom: 14px;
+    display: inline-block;
+}
+#into_detail .Input li div.col-xs-12 {
+    display: none;
+}
+#into_detail .Input li .divSpan {
+    margin-left: .5em;
+    color: #999;
+    display: inline-block;
+}
+#into_detail .Input .span {
+    border-radius: 5px;
+    min-height: 0;
+}
+#into_detail .Input p.alert-info,
+#into_detail .Input p.alert-warning {
+    word-wrap: break-word;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    padding: 5px 1em;
+}
+#into_detail .Input p.alert-info span,
+#into_detail .Input p.alert-warning span {
+    font-size: 12px;
+    margin-right: 0;
+}
+#into_detail .Input p.alert-warning {
+    color: #900;
+    background: #ffffcc;
+}
+#into_detail .Input p.alert-info {
+    color: #31708f;
+}
+#into_detail .img-li {
+    clear: both;
+}
+#into_detail .img-li .zindex {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+#into_detail .img-li .zindex div {
+    margin-left: 25%;
+}
+#into_detail .img-li .bigB {
+    position: absolute;
+    width: 30px;
+    background: #fff;
+    border-radius: 30px;
+    line-height: 30px;
+    right: 2em;
+    top: 1em;
+    display: none;
+    cursor: pointer;
+}
+#into_detail .img-li .progress_bar {
+    position: absolute;
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    left: 0;
+}
+#into_b .header {
+    background: #fff;
+    padding: 1em 0;
+    margin-bottom: 1em;
+}
+#into_b .header .row {
+    margin: 0 1em;
+}
+#into_b .header .row p {
+    line-height: 34px;
+}
+#into_b .header .mobile_row {
+    display: none;
+}
+#into_b .header .pc_row {
+    display: block;
+}
+#into_b .header .remak {
+    margin: 0 1em;
+    border-top: 1px solid #ddd;
+}
+#into_b .header .remak p {
+    margin-top: 1em;
+}
+#into_b .groupList {
+    height: 45px;
+}
+#into_b .groupList div:first-child .Lp {
+    display: none;
+}
+#into_b .groupList .Ldiv {
+    float: left;
+    background: #E4F0FE;
+    text-align: center;
+    line-height: 45px;
+    border-left: none;
+    margin: 0;
+    position: relative;
+}
+#into_b .groupList .Lp {
+    position: absolute;
+    background: #E4F0FE;
+    left: -16px;
+    top: 6px;
+    width: 32px;
+    height: 32px;
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+    margin: 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+#into_b .groupList .bac_in {
+    background: #76B0DE;
+    color: #fff;
+}
+#into_b .groupList .bac_auto {
+    background: #E4F0FE;
+    color: #333;
+}
+#into_b .btnL {
+    padding: 1em 0;
+    margin-top: 1em;
+    text-align: center;
+}
+#into_b .btnL input[type='button'] {
+    width: 20%;
+    margin-left: 1em;
+}
+#into_b div.form-group {
+    display: none;
+}
+#into_b div.form-group:first-child {
+    display: block;
+}
+#into_b .into_center {
+    padding: 1em;
+    background: #fff;
+}
+#into_a {
+    background: #fff;
+}
+#into_a .header h4 {
+    display: none;
+}
+#into_a .header .row {
+    padding: 1em;
+}
+#into_a .header .row label {
+    display: none;
+}
+#into_a .header .row input {
+    margin-right: 1em;
+    padding: 2px 5px;
+    margin-bottom: 8px;
+}
+#into_a .header .row p {
+    line-height: 34px;
+    margin-bottom: .5em;
+    color: red;
+}
+#into_a .header .row p span img {
+    width: 20px;
+    height: 20px;
+}
+.msg,
+.pic {
+    position: fixed;
+    z-index: 99;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+.msg div,
+.pic div {
+    margin-top: 15%;
+    width: 50%;
+    background: #fff;
+    padding: 5% 10px;
+    margin-left: 25%;
+    border-radius: 30px;
+}
+.msg div p,
+.pic div p {
+    line-height: 34px;
+}
+#confirm,
+#alert,
+#confirmref,
+#befConfirm {
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+}
+#myModal select {
+    width: 100%;
+    margin-bottom: 1em;
+}
+.footer {
+    display: none;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    opacity: .5;
+    z-index: 99;
+}
+.footer button {
+    text-shadow: 0 1px #333;
+}
+#laydate_box {
+    box-sizing: content-box;
+}
+#laydate_box div,
+#laydate_box table {
+    box-sizing: content-box;
+}
+#wodang {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.alian {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1111;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+}
+.colseI {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    background: #ddd;
+    display: none;
+    z-index: 1112;
+    cursor: pointer;
+}

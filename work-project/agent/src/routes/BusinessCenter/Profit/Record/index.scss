@@ -1,0 +1,21 @@
+.business-center-record{
+  .item{
+    border-top:1px solid #ececec;
+    margin-top: 24px;
+    .ant-col-8{
+      padding: 6px 0;
+    }
+
+    .title{
+      border-left: 3px solid #ffaa00;
+      padding-left: 8px;
+      margin: 12px 0;
+      font-weight:600;
+    }
+    label{
+      display: inline-block;
+      width: 100px;
+      text-align: right;
+    }
+  }
+}

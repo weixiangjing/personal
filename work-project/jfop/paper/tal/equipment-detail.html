@@ -1,0 +1,72 @@
+<div class="container" ng-hide="hideF" id="into_b">
+  <div class="header">
+    <div class="row">
+      <p class="col-xs-12">申请店铺：[{{code}}]{{merchant_name}}</p>
+      <p class="col-xs-12">支付方式：{{pay_mode_name}}/{{channel_name}}</p>
+    </div>
+  </div>
+  <div class="remak" ng-if="bujian">
+    <h4><span></span><p>审核意见</p></h4>
+    <p style="color: red;padding: 0 1em;word-wrap: break-word;">{{results}}</p>
+  </div>
+  <form action="" onsubmit="return false" id="into_detail" class="form-horizontal">
+  </form>
+  <div cg-busy="getpay" style="top:-1em;"></div>
+  <div class="btnL" ng-show="showBtn">
+    <button class="btn btn-info" ng-click="before()">上一步</button>
+    <button class="btn btn-success" ng-click="submit()" form="into_detail">提交申请</button>
+  </div>
+  <div cg-busy="Promise"></div>
+</div>
+<div class="msg" ng-show="success">
+  <div>
+    <img src="img/success2.png" alt=""><br><br>
+    <p>您的配置工单已提交成功！</p>
+    <p>运营人员将核实信息后为您处理，您也可使用 <a href="{{href}}">【工单查询】</a>服务跟踪处理进度。</p>
+    <a href="{{success_a}}" class="btn btn-info" ng-show="btn_success">返回</a>
+  </div>
+</div>
+<div class="pic" ng-show="erro">
+  <div>
+    <img src="img/Fail.png" alt="" style="width: 70px;height: 70px">
+    <br><br>
+    <p>{{err}}</p>
+    <p>如有问题，请咨询客服</p>
+    <a href="tel:028-69296292">028-69296292</a><br><br>
+  </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"></h4>
+        <p class="modal-title"></p>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">确认</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
+<div class="modal" id="detail_confirm">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close no" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">请确认！</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default no" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary ok" data-dismiss="modal">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <button ng-click="top()" class="btn" ><span class='glyphicon glyphicon-arrow-up'></span></button>
+</div>
+

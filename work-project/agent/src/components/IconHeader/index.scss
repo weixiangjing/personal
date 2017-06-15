@@ -1,0 +1,13 @@
+.common-icon-header{
+  position: relative;
+  padding-left: 64px;
+  .fa{
+    position: absolute;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    font-size: 52px;
+    left:0;
+    color: #00b6f0;
+  }
+}

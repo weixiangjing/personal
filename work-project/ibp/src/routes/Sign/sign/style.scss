@@ -1,0 +1,38 @@
+@import "../../../styles/variable";
+
+#login-page{
+  margin: $design-gutter_large*2 0;
+  .login-extra{
+    width: 200px;
+    display: block;
+  }
+  .login-card{
+    width: 400px;
+    margin: auto;
+  }
+  .login-button{
+    width: 100%;
+  }
+  .forget-pwd{
+    padding: $design-gutter_large 0;
+    border-top: solid 1px $grey;
+  }
+  .user-info{
+    margin: auto;
+    text-align: center;
+    padding: $design-gutter_large*2 0;
+    .avatar{
+      width: 70px;
+      height: 70px;
+      overflow: hidden;
+      border-radius: 35px;
+      background: center no-repeat;
+      background-size: cover;
+      margin: $design-gutter auto;
+      &:hover{
+        box-shadow: 0 0 3px 2px #83d4fb;
+        border-color: transparent;
+      }
+    }
+  }
+}

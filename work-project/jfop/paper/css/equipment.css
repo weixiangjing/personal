@@ -1,0 +1,566 @@
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+body {
+  padding: 20px 0;
+  background: #ebecf1;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.clear {
+  clear: both;
+}
+.header hr {
+  margin: 0 -2em;
+}
+#basic {
+  background: #fff;
+}
+h4 {
+  margin: 1em 0;
+  position: relative;
+}
+h4 span {
+  position: absolute;
+  display: inline-block;
+  width: 5px;
+  height: 19px;
+  bottom: 0;
+  background: #FFA115;
+}
+h4 p {
+
+  margin-left: 10px;
+  display: inline-block;
+  color: #333;
+  font-weight: bold;
+}
+#into .Top label {
+  display: none;
+}
+#into .Top > p {
+  color: red;
+  font-size: 12px;
+  line-height: 34px;
+}
+#into .Top > p img {
+  width: 20px;
+  height: 20px;
+}
+#into .Top > p span {
+  font-size: 12px;
+  margin-right: 0;
+}
+form > div {
+  padding: 0 15px;
+}
+form > div p > span {
+  font-size: 14px;
+  margin-right: 1em;
+}
+form .img-li > p {
+  color: #FFB268;
+  font-size: 12px;
+  background: #FFEDDC;
+  border: 1px solid #FFB268;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+form .img-li li form div:first-child {
+  position: absolute;
+  top: 0;
+  width: 180px;
+  height: 240px;
+  background: #777;
+}
+form .img-li li form div:first-child div {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+form h4 {
+  margin: 1em 0;
+  position: relative;
+}
+form h4 span {
+  position: absolute;
+  display: inline-block;
+  width: 5px;
+  height: 19px;
+  bottom: 0;
+  background: #FFA115;
+}
+form h4 p {
+  margin-left: 10px;
+  display: inline-block;
+}
+form .jinJ ul,
+form .channel ul {
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+form .jinJ ul .actv,
+form .channel ul .actv {
+  border: 1px solid #00ADEF;
+  background: #EBFAFF;
+}
+form .jinJ ul li,
+form .channel ul li {
+  float: left;
+  margin-right: 2em;
+  border: 1px solid #ddd;
+  line-height: 26px;
+  text-align: center;
+  padding: 2px;
+  margin-bottom: .5em;
+}
+form .jinJ ul li label,
+form .channel ul li label {
+  width: 130px;
+  margin-bottom: 0;
+}
+form input,
+form select,
+form textarea {
+  margin-right: 1em;
+  padding: 2px 5px;
+  margin-bottom: 1em;
+}
+form label:hover {
+  cursor: pointer;
+}
+form button {
+  line-height: 28px;
+}
+form .ref {
+  background: #FFFFCC;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  padding: 1.5em;
+  padding-bottom: 0.5em;
+}
+form .ref label {
+  display: none;
+}
+form .ref p {
+  margin-bottom: 1em;
+}
+form ul {
+  overflow: hidden;
+}
+form .input-group-addon {
+  padding: 2px 5px;
+}
+form .salesman label {
+  display: none;
+}
+#into input[type="radio"] {
+  display: none;
+}
+#into button {
+  margin-left: 40%;
+  width: 20%;
+}
+#into_detail label {
+  color: #999;
+  font-weight: normal;
+}
+#into_detail .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+#into_detail .control-label {
+  padding-right: 1em;
+}
+#into_detail .Input li,
+#into_detail .sheB li {
+  clear: both;
+}
+#into_detail .Input li label span,
+#into_detail .sheB li label span {
+  color: red;
+  margin-right: 2px;
+}
+#into_detail .Input li .mob_label,
+#into_detail .sheB li .mob_label {
+  display: none;
+}
+#into_detail .Input .mob_file > span,
+#into_detail .sheB .mob_file > span {
+  color: red;
+  display: block;
+  clear: both;
+  margin-left: 17%;
+}
+#into_detail .Input .mob_file .devlue,
+#into_detail .sheB .mob_file .devlue {
+  margin-left: 1em;
+}
+#into_detail .Input > a,
+#into_detail .sheB > a {
+  margin-left: .5em;
+  line-height: 34px;
+  float: left;
+}
+#into_detail .Input > a img,
+#into_detail .sheB > a img {
+  width: 28px;
+  height: 28px;
+}
+#into_detail .Input p,
+#into_detail .sheB p {
+  line-height: 34px;
+  float: left;
+  padding: 0 1em;
+  color: red;
+}
+#into_detail .Input p img,
+#into_detail .sheB p img {
+  width: 28px;
+  height: 28px;
+}
+#into_detail .Input p.col-xs-offset-2,
+#into_detail .sheB p.col-xs-offset-2 {
+  clear: both;
+  color: #666;
+}
+#into_detail .Input p.alert-info,
+#into_detail .sheB p.alert-info,
+#into_detail .Input p.alert-warning,
+#into_detail .sheB p.alert-warning {
+  word-wrap: break-word;
+  margin-bottom: 1em;
+  line-height: 1.5;
+  padding: 5px 1em;
+}
+#into_detail .Input p.alert-info span,
+#into_detail .sheB p.alert-info span,
+#into_detail .Input p.alert-warning span,
+#into_detail .sheB p.alert-warning span {
+  font-size: 12px;
+  margin-right: 0;
+}
+#into_detail .Input p.alert-warning,
+#into_detail .sheB p.alert-warning {
+  color: #900;
+  background: #ffffcc;
+}
+#into_detail .Input p.alert-info,
+#into_detail .sheB p.alert-info {
+  color: #31708f;
+}
+#into_detail .Input a.iframeA,
+#into_detail .sheB a.iframeA {
+  display: none;
+}
+#into_detail .Input div.btn[data-toggle='modal'],
+#into_detail .sheB div.btn[data-toggle='modal'] {
+  height: 34px;
+  margin-left: 1em;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+#into_detail .Input div.col-xs-12,
+#into_detail .sheB div.col-xs-12 {
+  display: none;
+}
+#into_detail .Input .divSpan,
+#into_detail .sheB .divSpan {
+  margin-left: .5em;
+  color: #999;
+  display: inline-block;
+}
+#into_detail > div {
+  background: #fff;
+  padding: 1em 30px;
+  border: #ddd 1px solid;
+  margin-bottom: 2em;
+}
+#into_detail .sheB li span,
+#into_detail .sheB .sheBf {
+  cursor: pointer;
+}
+#into_detail .sheB .sheBf {
+  height: 35px;
+  margin-bottom: 0;
+}
+#into_detail .sheB hr {
+  border-top: 1px solid #ddd;
+  clear: both;
+}
+#into_detail .sheB input {
+  margin-right: 5px;
+  margin-bottom: 0;
+}
+#into_detail label img {
+  margin-right: 0.5em;
+}
+#into_detail .sheB .sheBli {
+  position: relative;
+}
+#into_detail .sheB .sheBli .suggest {
+  position: absolute;
+  border: 1px solid #ccc;
+  display: none;
+  top: 35px;
+  z-index: 99;
+  background: #fff;
+}
+#into_detail .sheB .sheBli .suggest ul {
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+}
+#into_detail .sheB .sheBli .suggest ul li {
+  cursor: pointer;
+  height: 35px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+#into_detail .sheB .sheBli .suggest ul li:last-child {
+  border-bottom: none;
+}
+#into_detail .sheB .sheBli .suggest ul li:hover {
+  background: #eee;
+}
+#into_detail input {
+  margin-right: 0;
+}
+#into_detail select {
+  margin-right: 0;
+}
+#into_detail .Input li,
+#into_detail .sheB li {
+  margin-bottom: 10px;
+}
+#into_detail .img-li {
+  overflow: hidden;
+}
+#into_detail .img-li label {
+  color: #333333;
+}
+#into_detail .img-li input {
+  display: none;
+}
+#into_detail .img-li li {
+  float: left;
+  text-align: center;
+  height: 300px;
+  position: relative;
+}
+#into_detail .img-li li form {
+  margin: 5px 1em 5px 0;
+  overflow: hidden;
+  position: relative;
+  width: 180px;
+  height: 240px;
+}
+#into_detail .img-li li form > div {
+  padding: 0;
+}
+#into_detail .img-li li form .divbtn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #666;
+  padding: 5px 0;
+  display: none;
+  z-index: 999;
+}
+#into_detail .img-li li form .divbtn .btn {
+  width: 32px;
+  padding: 5px;
+  margin-left: 10px;
+  background: #fff;
+  float: left;
+  border-radius: 20px;
+}
+#into_detail .img-li li form .divbtn .add {
+  margin-left: 25%;
+}
+#into_detail .img-li li form .zindex {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+#into_detail .img-li li form .zindex div {
+  margin-left: 25%;
+  margin-top: 1em;
+}
+#into_detail .img-li li p.placeH {
+  position: absolute;
+  top: 20%;
+  width: 180px;
+  padding: 0 6px;
+  color: #aaa;
+  font-size: 12px;
+}
+#into_detail .img-li li div.left {
+  width: 180px;
+}
+#into_detail .img-li li div.left p:first-child {
+  text-align: center;
+}
+#into_detail .img-li li div.left a.iframeA {
+  display: none;
+}
+#into_detail .img-li li > p {
+  clear: both;
+}
+#into_detail .img-li .bigB {
+  position: absolute;
+  width: 30px;
+  background: #fff;
+  border-radius: 30px;
+  line-height: 30px;
+  right: 2em;
+  top: 1em;
+  display: none;
+  cursor: pointer;
+}
+#into_detail .img-li .progress_bar {
+  position: absolute;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  left: 0;
+}
+#into_b {
+  padding-right: 0;
+  padding-left: 0;
+}
+#into_b .header,
+#into_b .remak {
+  padding: 1em 30px;
+  background: #fff;
+  margin-bottom: 2em;
+}
+#into_b .header .row,
+#into_b .remak .row {
+  padding: 0 1em;
+}
+#into_b .header .row input,
+#into_b .remak .row input {
+  margin-right: 1em;
+  padding: 2px 5px;
+  margin-bottom: 8px;
+}
+#into_b .header .row p,
+#into_b .remak .row p {
+  line-height: 34px;
+}
+#into_b .btnL {
+  padding: 1em 0;
+  background: #fff;
+  margin-top: -2.1em;
+  border: 1px solid #ddd;
+  border-top: none;
+  text-align: center;
+}
+#into_b .btnL .btn {
+  width: 20%;
+}
+.header {
+  padding-left: 15px;
+  margin-bottom: 1em;
+}
+.header .breadcrumb {
+  margin-bottom: 0;
+  padding: 0;
+}
+.msg,
+.pic {
+  position: fixed;
+  z-index: 99;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.msg div,
+.pic div {
+  margin-top: 15%;
+  width: 50%;
+  background: #fff;
+  padding: 5% 10px;
+  margin-left: 25%;
+  border-radius: 30px;
+}
+.footer {
+  display: none;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  opacity: .5;
+  z-index: 99;
+}
+.footer button {
+  text-shadow: 0 1px #333;
+}
+#confirm,
+#alert,
+#detail_confirm {
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99999;
+}
+#myModal select {
+  width: 100%;
+  margin-bottom: 1em;
+}
+#wodang {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.alian {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1111;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
+.colseI {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  background: #fff;
+  display: none;
+  z-index: 1112;
+  cursor: pointer;
+}

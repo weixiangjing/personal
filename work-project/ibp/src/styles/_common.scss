@@ -1,0 +1,114 @@
+@import "variable";
+@import "mixin";
+
+body{
+  background: $grey_normal;
+}
+[role='button'] {
+  cursor: pointer;
+}
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
+}
+.gutter{
+  margin: $design-gutter;
+}
+.gutter-v{
+  margin: $design-gutter 0;
+}
+.gutter-h{
+  margin:0 $design-gutter
+}
+.gutter-left{
+  margin-left: $design-gutter;
+}
+.gutter-right{
+  margin-right:$design-gutter;
+}
+.gutter-top{
+  margin-top: $design-gutter;
+}
+.margin-bottom,.gutter-bottom{
+  margin-bottom:$design-gutter;
+}
+.over-hide{
+  overflow: hidden;
+}
+.gutter-lg{
+  margin: $design-gutter_large;
+}
+.gutter-v-lg{
+  margin: $design-gutter_large 0;
+}
+.gutter-h-lg{
+  margin:0 $design-gutter_large
+}
+.gutter-left-lg{
+  margin-left: $design-gutter_large;
+}
+.gutter-right-lg{
+  margin-right:$design-gutter_large;
+}
+.gutter-top-lg{
+  margin-top: $design-gutter_large;
+}
+.gutter-bottom-lg{
+  margin-bottom:$design-gutter_large;
+}
+.rotate360 {
+  @include rotate(180deg);
+}
+.transition {
+  @include transition(all, 300ms);
+}
+.x-scroll{
+  &::-webkit-scrollbar{
+    width:5px;
+  }
+  &::-webkit-scrollbar-thumb{
+    background-color: $grey_normal;
+    border-radius: 3px;
+    border: solid 1px $normal-color;
+  }
+}
+.text-sm{
+  font-size: 80%;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.text-danger{
+  color: $error-color;
+}
+.text-primary{
+  color: $primary-color;
+}
+.text-success{
+  color: $success-color;
+}
+.text-muted{
+  color: $grey_normal;
+}
+.bg-white{
+  background-color: #ffffff;
+}
+
+.status-label{
+  &.dot:before{
+    content: '●';
+    margin-right: $design-gutter;
+    font-weight: bold;
+  }
+  &[data-status='2']{
+    color: $primary-color;
+  }
+  &[data-status='3']{
+    color: $error-color;
+  }
+}

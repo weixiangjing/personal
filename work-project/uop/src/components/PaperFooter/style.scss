@@ -1,0 +1,28 @@
+@import "../../styles/variable";
+.footer-links{
+  padding-left: $design-gutter;
+  &:before{
+    content: "\f0c1";
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-right: $design-gutter;
+    background-color: #dcdcdc;
+    color: #ffffff;
+    padding: 3px;
+    font-size: 12px;
+    border-radius: 50%;
+  }
+  li{
+    display: inline-block;
+    &:after{
+      content: '|';
+      margin: 0 $design-gutter;
+      color: $grey_normal;
+    }
+    &:last-child:after{
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.service-cart-buy {
+  border: 1px solid #ececec;
+  border-radius: 3px;
+  padding: 24px;
+
+
+
+  .ant-table-row{
+    td{
+      vertical-align: top;
+    }
+  }
+  .remove{
+   .anticon{
+     font-size: 20px;
+     color: #989898;
+     margin-left: 12px;
+     vertical-align: middle;
+   }
+    font{
+      vertical-align: middle;
+    }
+  }
+  .action-bar{
+    button{
+      margin-left: 12px;
+    }
+  }
+  .type-id {
+    padding-left: 32px;
+    position: relative;
+    padding-right: 32px;
+    input{
+      margin-bottom: 8px;
+    }
+    label{
+      color: #2db7f5;
+    }
+    .anticon {
+      position: absolute;
+      top: 3px;
+      font-size: 20px;
+      color: #989898;
+    }
+    .right-icon{
+      right: 0;
+    }
+    .left-icon{
+      left:0;
+    }
+
+  }
+  .product-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+  }
+  .buy-desc {
+    *{font-size: 14px}
+    > div {
+      padding: 12px;
+      label {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+        margin-right: 12px;
+      }
+    }
+    margin-bottom: 24px;
+  }
+  .cart-items {
+    th {
+      background: none;
+      border-bottom: 1px solid #ececec;
+      border-top: 1px solid #ececec;
+      font-size: 14px;
+      color: #666666;
+    }
+  }
+}
+
+.service-empty-cart{
+  text-align: center;
+  button{
+    margin: 24px;
+  }
+}
+
+.service-cart-items-header{
+  padding:24px 0;
+  border-top:1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666666;
+}
+.service-cart-bar{
+  position: relative;
+  .clear-cart{
+    position: absolute;
+    right: 90px;
+    bottom: 8px;
+
+  }
+}
+.service-cart-item{
+  padding: 12px 0;
+  .title-icon{
+    position: relative;
+    padding-left:42px;
+    .sec_title{
+      margin-bottom: 0;
+      font-weight: 400;
+      font-size: 12px;
+    }
+    .main-title{
+      margin-bottom: 3px;
+      font-size: 14px;
+    }
+    img{
+      position: absolute;
+      left:0;
+    }
+  }
+}
+.service-cart-same-item{
+  border-bottom: none;
+}
+.service-cart-group-last-item{
+  border-bottom: 1px solid #ececec;
+}
+
+
+.unit-id-select{
+  width: 300px !important;
+}

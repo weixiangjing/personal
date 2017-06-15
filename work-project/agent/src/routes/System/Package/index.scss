@@ -1,0 +1,26 @@
+
+.card-body-none{
+  .ant-card-head{
+    border-bottom:0;
+  }
+  .ant-card-body{
+    padding:0;
+  }
+}
+
+
+.package-setting{
+  .pay-channel-name{
+    display: inline-block;
+    width: 120px;
+  }
+  .small-control{
+    width: 120px;
+  }
+  .bank-reward{
+    border:1px solid #ececec;
+    padding-left: 24px;
+    margin-top: 12px;
+    border-radius: 2px;
+  }
+}

@@ -1,0 +1,27 @@
+.common-draggable-item {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  padding: 8px 8px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  border: 1px dashed #ECECEC;
+  background: #f1f1f1;
+
+  &:nth-child(odd) {
+    margin-right: 8px;
+  }
+  border-radius: 3px;
+  &:hover {
+    cursor: move;
+  }
+
+  .fa-arrows {
+    color: green;
+    margin-right: 15px;
+  }
+
+}

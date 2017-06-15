@@ -1,0 +1,98 @@
+<div class="container header">
+  <ul class="breadcrumb">
+    <li>工单服务</li>
+    <li>支付参数配置{{status}}</li>
+  </ul>
+</div>
+<div cg-busy="startLod"></div>
+<div class="container" id="basic">
+  <form action="" onsubmit="return false" id="into" style="padding-bottom: 30px;">
+    <ul class="row form-group Top">
+      <h4><span></span><p>填写门店信息</p></h4>
+      <li><label for='mcode' class="col-xs-3"><span style='color:red'>*</span>MCODE</label>
+        <input type="text" name="mcode" placeholder="MCODE(必填)" ng-model="mcode"
+               id="mcode" class="col-xs-7 col-sm-2 form-control" form="into" required/></li>
+      <li style="border-bottom: none"><label for='merchant_name' class="col-xs-3"><span style='color:red'>*</span>商户名称</label>
+        <input type="text" name="merchant_name" placeholder="商户名称(必填)" ng-model="merchant_name"
+               id="merchant_name" class="col-xs-7 col-sm-4 form-control" form="into" required/></li>
+      <p class="col-xs-12 col-sm-5"><span></span>&nbsp;{{er}}</p>
+    </ul>
+
+    <div class="row form-group jinJ" >
+      <h4><span></span><p>选择支付方式</p></h4>
+      <ul></ul>
+    </div>
+    <div cg-busy="P"></div>
+    <div class="row form-group channel">
+      <h4><span></span><p>选择支付通道</p></h4>
+      <ul></ul>
+    </div>
+    <ul class="form-group ref">
+      <p>如需要共用已有门店MCODE的收银参数时，请提供以下的信息：</p>
+      <li><label for="ref_store_mcode" class="col-xs-3">原门店MCODE</label>
+        <input class="form-control col-xs-7 col-sm-5" type="text" id="ref_store_mcode" name="ref_store_mcode" placeholder="请输入原门店MCODE" maxlength="25"></li>
+      <li style="border-bottom: none"><label for="ref_store_name" class="col-xs-3">商户的名称</label>
+        <input class="form-control col-xs-7 col-sm-5" type="text" id="ref_store_name" name="ref_store_name" placeholder="请输入商户的名称"></li>
+    </ul>
+    <div class="form-group row salesman">
+      <h4><span></span><p>业务人员信息</p></h4>
+      <ul>
+        <li><label for="salesman_type" class="col-xs-3"><span style='color:red'>*</span>渠道类型</label>
+          <input class="col-xs-7 col-sm-2 form-control" type="text" id="salesman_type" ng-model="salesman_type" name="salesman_type" placeholder="请输入渠道类型" required>
+        </li>
+        <li><label for="salesman_branch" class="col-xs-3"><span style='color:red'>*</span>渠道名称</label>
+          <input class="col-xs-7 col-sm-2 form-control" type="text" id="salesman_branch" ng-model="salesman_branch" name="salesman_branch" placeholder="请输入渠道名称" required>
+        </li>
+        <li><label for="salesman_name" class="col-xs-3"><span style='color:red'>*</span>业务员姓名</label>
+          <input class="col-xs-7 col-sm-2 form-control" type="text" id="salesman_name" ng-model="salesman_name" name="salesman_name" placeholder="请输入业务员姓名" required>
+        </li>
+        <li><label for="salesman_phone" class="col-xs-3"><span style='color:red'>*</span>业务员手机号</label>
+          <input class="col-xs-7 col-sm-2 form-control" type="tel" id="salesman_phone" ng-model="salesman_phone" name="salesman_phone" placeholder="请输入业务员手机号" maxlength="11" minlength="11" required>
+        </li>
+      </ul>
+    </div>
+    <button type="submit" class="btn btn-success" ng-click="jump()" disabled>下一步</button>
+  </form>
+</div>
+<div cg-busy="PromiseT" style="top:-4.5em"></div>
+<div cg-busy="Lod"></div>
+<div class="pic" ng-show="erro">
+  <div>
+    <img src="img/Fail.png" alt="" style="width: 70px;height: 70px">
+    <br><br>
+    <p>{{err}}</p>
+    <p>如有问题，请咨询客服</p>
+    <a href="tel:028-69296292">028-69296292</a><br>
+  </div>
+</div>
+<div class="modal" id="confirm">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close no" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">请确认！</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default no" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary ok" data-dismiss="modal">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="alert">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">提示！</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="wodang"></div>
+<div ui-view=""></div>

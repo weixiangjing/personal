@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>入件验证</title>
+    <style>
+        body{background: #ddd;font-size: 12px;margin: 0}
+        .top-title{background: #FEEAD4;padding: 5px 10px}
+        .top-title img{width: 24px}
+        .top-title>div{display: inline-block;}
+        .top-title>div:nth-child(2){width: 89%;}
+        .top-title>div p{color:#FF8E52}
+        #submit{padding: 8px 15px;min-height: 400px;}
+        #submit a{color: #4CB0FF}
+        #submit label{display:block;border-bottom: 1px solid #ddd;padding-bottom: 10px;}
+        #submit .div-pwd label{margin-top: 20px}
+        #submit div{margin: 10px 0;border-bottom: 1px solid #ddd;padding-bottom: 10px;}
+        #submit div p{margin: 0;padding-left: 45px;height: 14px;color: red}
+        #submit input{margin-top: 10px;padding-left:5px ;border: none;box-shadow: none;-webkit-box-shadow: none;line-height: 32px;}
+        #submit input:focus{border-color: transparent;outline: none;-webkit-box-shadow: none;box-shadow: none;}
+        #submit img{width: 32px;vertical-align: middle;}
+        #submit .div-pwd{border-bottom: none;}
+        #submit .div-sub{border-bottom: none;margin-top: 24px}
+        #submit .div-sub p{text-align: center;margin-top: 10px;padding-left: 0}
+        #submit .div-sub button{width: 100%;line-height: 24px;color: #fff;background: #37A8FF;border-radius: 6px;padding: 5px 0;font-size: 14px;}
+        footer{text-align: center;padding-bottom: 15px}
+        footer img{width: 200px}
+        .modal{display: none;text-align: center;position: absolute;z-index: 99;background: rgba(0, 0, 0, 0.7);top:0;width: 100%;height: 100%}
+        .modal img{width: 100px;margin-top: 25%}
+        .modal p{margin-top: 15px;color: #FF8E52}
+    </style>
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/jquerymd5.min.js"></script>
+  <script src="js/config.js"></script>
+</head>
+<body>
+    <div class="top-title">
+        <div><img src="img/prompt.png" alt=""></div>
+        <div><p>您正在请求微信支付宝的受理业务，请在下方输入短信验证码并设置交易密码完成身份验证。</p></div>
+    </div>
+    <div style="background: #fff">
+        <form action="" method="post" onsubmit="return false" id="submit">
+            <div class="div-ym">
+                <label for="sms_code">验证码</label>
+                <img src="img/icon-1.png" alt="">
+                <input type="text" id="sms_code" name="sms_code" placeholder="请输入验证码" required onblur="onblurs(this)">
+                <a onclick="getSms()">重新获取</a>
+                <p class="err-sms_code"></p>
+            </div>
+            <div class="div-pwd">
+                <label for="withdraw_pwd">交易密码</label>
+                <div class="pwd">
+                    <img src="img/icon-2.png" alt="">
+                    <input type="password" id="withdraw_pwd"
+                           name="withdraw_pwd"
+                           placeholder="请设置6位数字交易密码"
+                           required
+                           pattern="\d{6}"
+                           maxlength="6"
+                           onblur="onblurs(this)"
+                    >
+                    <p class="err-withdraw_pwd"></p>
+                </div>
+                <div class="pwd">
+                    <img src="img/icon-2.png" alt="">
+                    <input type="password" id="res_password" name="res_password"
+                           placeholder="请确认交易密码" onblur="onblurs(this)"
+                           required pattern="\d{6}" maxlength="6">
+                    <p class="err-res_password"></p>
+                </div>
+            </div>
+            <div class="div-sub">
+                <button onclick="submitBtn()">提交</button>
+                <p></p>
+            </div>
+        </form>
+        <footer>
+            <img src="img/logo.png" alt="">
+        </footer>
+    </div>
+    <div class="modal">
+        <img src="img/success1.png" alt="">
+        <p>入件受理成功</p>
+    </div>
+</body>
+<script>
+    var theRequest=new Object();
+    var inputs=$("#submit input");
+    var modal=$(".modal");
+    var sub_err=$(".div-sub p");
+    var sub=$(".div-sub button");
+    var ps=$("#submit div p");
+    function getSms() {
+      $.ajax({
+        type: 'POST',
+        url: config.api + '/mybank/snedOpenAccSms',
+        data: JSON.stringify(decorateBody(theRequest)),
+        dataType: 'json',
+        beforeSend: function (xhr) {xhr.setRequestHeader("Content-Type", "application/json");},
+        error: function () {ps[0].innerHTML="连接服务器失败，稍后再试"},
+        success: function (da) {
+          if(da.code==0){
+            ps[0].innerHTML=""
+          }else {
+            ps[0].innerHTML=da.info;
+          }
+        },
+        complete: function (e) {
+          //document.write(e.responseText)
+        }
+      })
+    }
+    function onblurs(e) {
+        var name="err-"+e.name;
+        var p_html;
+        for(var i=0;i<ps.length;i++){
+            if(ps[i].className==name){
+                p_html=ps[i];
+            }
+        }
+        if(e.validity.valid){
+         if(e.value.trim()){ p_html.innerHTML="";}else {p_html.innerHTML="请输入正确的字符";}
+        }else {
+          p_html.innerHTML="请输入正确的字符";
+        }
+    }
+    function submitBtn() {
+      var obj=new Object();
+      for(var i=0;i<inputs.length;i++){
+        if(inputs[i].validity.valid){
+          if(inputs[i].value.trim()){
+            obj[inputs[i].name]=inputs[i].value.trim();
+          }else {
+            ps[i].innerHTML="请输入正确的字符";
+            return;
+          }
+        }else {
+          ps[i].innerHTML="请输入正确的字符";
+          return;
+        }
+      }
+      if(obj.withdraw_pwd!==obj.res_password){
+            ps[2].innerHTML="两次密码不一致"
+            return;
+        }
+      decorateBody(obj)
+      sub.html("<img src='img/loading.gif' style='width: 14px'>提交中...");
+      sub.attr('disabled', true);
+      modal.css("display","block")
+      obj.withdraw_pwd=$.md5(obj.withdraw_pwd);
+      delete obj.res_password;
+      $.ajax({
+        type: 'POST',
+        url: config.api + '/mybank/openAcc',
+        data: JSON.stringify(obj),
+        dataType: 'json',
+        beforeSend: function (xhr) {
+          xhr.setRequestHeader("Content-Type", "application/json");
+        },
+        error: function () {
+          sub_err.html("连接服务器失败，稍后再试");
+          sub.html("提交");
+          sub.removeAttr('disabled');
+        },
+        success: function (da) {
+          if(da.code==0){
+            sub_err.html("");
+            sub.html("提交");
+            sub.removeAttr('disabled');
+            modal.css("display","block");
+            for(var v=0;v<inputs.length;v++){inputs[v].value='';}
+          }else {
+            sub_err.html(da.info);
+            sub.html("提交");
+            sub.removeAttr('disabled');
+          }
+        },
+        complete: function () {
+
+        }
+      })
+    }
+  window.onload=function () {getSms()}
+</script>
+</html>

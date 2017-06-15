@@ -1,0 +1,30 @@
+
+.login-content{
+  width:100%;
+  .ant-card{
+    width:350px;
+    margin: 0 auto;
+    border: 3px solid #ddd;
+    border-radius: 5px;
+  }
+  .ant-card-body{
+    text-align: center;
+    .login-dialog{
+      button{  float:right;  }
+      >div:last-child{margin-bottom: 0}
+      .remember{text-align: left;margin-bottom: 0}
+    }
+  }
+  .login-extra{width: 260px;margin-top: -15px;}
+  .user-logined{
+    cursor: pointer;
+    .img-back{
+      display:inline-block;
+      width: 75px;
+      height: 75px;
+      border: 1px solid #ddd;
+      border-radius: 75px;
+    }
+  }
+  .user-logined:hover{.img-back{box-shadow: 0 0 3px 2px #83d4fd}}
+}

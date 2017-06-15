@@ -1,0 +1,26 @@
+.custom-container{
+  position: relative;
+  overflow: hidden;
+  width: 1150px;
+  .common-print-model-visual{
+    float: left;
+  }
+  .quick-select-template{
+    width: 200px;
+    padding: 0 12px;
+    float: left;
+    li{
+      border:1px solid #ececec;
+      border-radius: 3px;
+      padding: 12px;
+      margin-bottom: 12px;
+      &:last-child{
+        font-size: 16px;
+      }
+      &:hover{
+        background: #f1f1f1;
+        cursor: pointer;;
+      }
+    }
+  }
+}

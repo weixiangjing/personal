@@ -1,0 +1,27 @@
+@import "../../../../../styles/variable";
+
+.biz-group{
+  margin-bottom: $design-gutter*3;
+  .title{
+    border-bottom: solid 1px $grey_normal;
+    padding: $design-gutter 0;
+    &:before{
+      content: ' ';
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 $design-gutter;
+      width: 4px;
+      height: 1.3em;
+      background: $warning-color;
+    }
+  }
+  .content{
+    padding: $design-gutter*2 $design-gutter*5;
+  }
+  .ant-form-item{
+    display: inline;
+  }
+}
+.ant-form-item-control .text-muted{
+  line-height: 1.5;
+}

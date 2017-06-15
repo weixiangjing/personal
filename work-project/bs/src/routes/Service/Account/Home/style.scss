@@ -1,0 +1,140 @@
+
+.details_querya{
+  .ant-card{margin-bottom: 20px}
+  .fa-chevron-circle-down{
+    position: absolute;
+    left:140px;
+    top: 13px;
+    z-index: 1;
+  }
+
+  .ant-card-body{
+    padding-bottom: 12px;
+    .data-text{
+      margin-left: 15px;
+      margin-top: 5px;
+      .d-number{
+        font-size: 24px;
+      }
+    }
+    .data-item{
+
+      .data-icon,.data-text{
+        display: inline-block;
+        vertical-align: middle;
+        .fa-calendar{
+          font-size: 30px;
+          color: #777;
+          margin-top: 16px;
+        }
+      }
+      .data-left{float: left}
+      .data-right{float: right;margin-right: 20px}
+    }
+    .data-item.right{float: right;margin-right: 24px}
+    .ant-divider{height: 53px}
+    .ant-table-title{font-size: 16px;font-weight: bold;}
+    .ant-table-tbody{
+      tr:last-child td{border-bottom: none}
+    }
+  }
+  .basic_card{
+    *:not(a){font-size: 14px;
+      color: #666;
+    font-weight: 400;
+    }
+    a{color:#19a6f8;margin-left: 25px}
+    a:hover{color:#49a9ee}
+    .ant-card-body{
+      padding-bottom: 15px;
+      .ant-col-10{
+        ul li{
+          margin-bottom: 16px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+          span{
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+          }
+        }
+      }
+      .ant-col-4{text-align: center;padding-left: 24px;}
+    }
+  }
+  .ant-card-head-title{
+    .data-icon{
+      display: inline-block;
+      i{
+        font-size: 16px;
+        color: #999;
+      }
+    }
+    .data-text{
+      display: inline-block;
+      .ant-calendar-picker{
+        .ant-calendar-picker-input{
+          border: none;
+          font-size: 16px;
+          width: 200px;
+        }
+        .ant-input:focus, .ant-input:hover{
+          cursor: pointer;
+        }
+        .ant-calendar-picker-icon{display:none}
+      }
+      .ant-calendar-picker input{color:#666666}
+    }
+  }
+  .card_1{
+    .ant-card-body{
+      padding-bottom: 20px;
+      ul li{
+        margin-bottom: 10px;
+        span{
+         display: inline-block;
+          width: 100px;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+.icon32{
+  .Icon32_green{background: #66CC00;}
+  .fa-external-link{background: #FF9900;}
+  .fa-inbox{background: #999;}
+  .Icon32_blue{background: #2DB7F5;}
+  .fa.fa-database{background: #2DB7F5;}
+  .d-title{
+    margin-bottom: 0;
+  }
+    .fa{
+      width: 52px;
+      height: 52px;
+      line-height: 52px;
+      border-radius: 52px;
+      font-size: 30px;
+      background: #66cc00;
+      text-align: center;
+      color: #ffffff;
+
+
+    }
+
+}
+.d-amount{color: #6c0}
+.d-price{color: #f90}
+.title_span{margin-right: 15px}
+.color_2{color: green}
+.color_1{color: red}
+.color_3{color: gainsboro}
+.formBtn button{margin-left: 10px}
+.text-button{text-align: center}
+.myform .formFields .ant-form-item {margin-bottom: 0;}
+.not_basic_card{
+  text-align: center;
+  h5{ color:#19a6f8}
+  button{margin-top: 15px}
+}

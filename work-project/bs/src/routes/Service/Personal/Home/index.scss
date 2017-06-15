@@ -1,0 +1,90 @@
+.service-stat{
+  .stat-item{
+    //height: 70px;
+    .fa{
+      font-size: 30px;
+      margin-right: 15px;
+      display: inline-block;
+      width: 52px;
+      height: 52px;
+      text-align: center;
+      line-height: 52px;
+      border-radius: 52px;
+      background: #ff9900;
+      color: #ffffff;
+    }
+    .fa.fa-mobile-phone{font-size:40px;background:#00cc00}
+    .fa.small{
+      background: none;
+      color: #2db7f5;
+      font-size: 28px;
+      margin-right:0;
+      width: 20px;
+      height: 32px;
+      text-align: left;
+      line-height: initial;
+    }
+    .item{
+      display: inline-block;
+      vertical-align: top;
+      .line-d{
+        display: inline-block;
+        width: 80%;
+        height: 35px;
+        border-right: 1px solid #ddd;
+      }
+    }
+    ._unit{width: 70%;}
+    .icon{
+      margin-right: 24px;
+    }
+    .sub-icon{
+      .anticon{
+        font-size: 18px;
+        color: #00b3ee;
+      }
+    }
+    .lg-num{
+      font-size: 26px;
+      font-weight: 500;
+      color: #666;
+      span{
+        display: inline-block;
+        width: 50%;
+      }
+    }
+    .name{
+      color: #989898;
+    }
+  }
+  .ant-col-11{width: 49%}
+  .right_col{float: right}
+  .data-item li{
+    margin-top: 10px;
+    b{
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      //background: #f90;
+      margin-bottom: 3px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .data-date{
+      float: right;
+      color: #999;
+    }
+    .over-date{color:#f90}
+    .data-danger{color:#ea473d}
+    a{
+      margin-right: 15px;
+      i{margin-right: 10px}
+    }
+  }
+  .null_data{text-align: center}
+  >.ant-row{margin-top: 15px}
+}
+.color_2{color: green}
+.color_1{color: red}
+.color_3{color: gainsboro}

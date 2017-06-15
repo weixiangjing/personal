@@ -1,0 +1,12 @@
+@import "../../../../../styles/variable";
+
+#modify-password-page{
+  .form-content{
+    width: 500px;
+    margin: auto;
+    padding: $design-gutter*5 0;
+  }
+  .err_color{color: red}
+  .def_color{color: #f90}
+  .pass_input{width: 50%}
+}

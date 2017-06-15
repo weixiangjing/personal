@@ -1,0 +1,42 @@
+.list-item-width-delete{
+  padding: 8px 12px;
+  border:1px solid #ececec;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  &.active{
+    background: #108de9;
+    color: #ffffff;
+  }
+  &:hover {
+    background: #108de9;
+    color: #ffffff;
+    cursor: pointer;
+    .delete{
+      right:0;
+    }
+
+  }
+  .delete{
+    position: absolute;
+    right: -30px;
+    transition: right 200ms ease-in;
+    height: 100%;
+    background: #ea473d;
+    color: #ffffff;
+    text-align: center;
+    width: 30px;
+    top: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    i{
+      margin-top: 20px;
+      font-size: 16px;
+      &:hover{
+        cursor: pointer;
+      }
+
+    }
+
+  }
+}

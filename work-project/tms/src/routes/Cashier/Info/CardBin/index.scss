@@ -1,0 +1,24 @@
+.card-bin-item-detail{
+  *{
+    color: #666666;}
+  .ant-modal-footer{
+    span{
+      color: #ffffff ;
+    }
+    >button{
+
+      &:first-child{
+        display: none;
+      }
+    }
+  }
+  .ant-col-12{
+    margin-top: 15px;
+    label{
+      display: inline-block;
+      text-align: right;
+      width: 110px;
+      margin-right: 12px;
+    }
+  }
+}

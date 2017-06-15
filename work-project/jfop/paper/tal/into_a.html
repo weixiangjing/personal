@@ -1,0 +1,133 @@
+<div class="container header">
+  <ul class="breadcrumb">
+    <li>工单服务</li>
+    <li>进件申请{{status}}</li>
+  </ul>
+</div>
+<div cg-busy="startLod"></div>
+<div class="container" id="into_a">
+  <div class="header">
+    <h4><p>门店信息</p></h4>
+    <ul class="row">
+      <li><label for='mcode' class="col-xs-3"><span style='color:red'>*</span>MCODE</label><input type="text" name="mcode" placeholder="MCODE(必填)" ng-model="mcode"
+             id="mcode" class="col-xs-7 col-sm-2 form-control" form="into" required/></li>
+      <li><label for='merchant_name' class="col-xs-3"><span style='color:red'>*</span>商户名称</label><input type="text" name="merchant_name" placeholder="商户名称(必填)" ng-model="merchant_name"
+             id="merchant_name" class="col-xs-7 col-sm-4 form-control" form="into" required/></li>
+      <p class="col-xs-12 col-sm-5"><span></span>&nbsp;{{er}}</p>
+    </ul>
+
+  </div>
+  <form action="" onsubmit="return false" id="into" ng-hide="showlist">
+    <div class="row form-group jinJ" >
+    <h4><span></span><p>进件信息</p></h4>
+      <div cg-busy="payLi"></div>
+      <p class="col-xs-12 col-sm-2">支付方式:</p>
+      <ul class="pay"></ul>
+      <p class="col-xs-12 col-sm-2 zhifT">支付通道:</p>
+      <ul class="zhif_sold"></ul>
+      <p class="col-xs-12 col-sm-2 compayP">商户性质:</p>
+      <ul class="companyX"></ul>
+      <p class="col-xs-12 col-sm-2 soldP">结算类型:</p>
+      <ul class="sold"></ul>
+      <p class="col-xs-12 col-sm-2 signing">签约产品:</p>
+      <ul class="signingUl"></ul>
+      <ul class="form-group ref row">
+        <p>需要从商户【已完成】进件的门店加载资料时，请提供以下的信息：</p>
+        <li><label for="ref_store_mcode" class="col-xs-4">原门店MCODE</label>
+        <input class="form-control col-xs-7 col-sm-5" type="text" id="ref_store_mcode" name="ref_store_mcode" placeholder="请输入原门店MCODE" maxlength="25"></li>
+        <li><label for="ref_business_license_code" class="col-xs-4">营业执照号</label>
+        <input class="form-control col-xs-7 col-sm-5" type="text" id="ref_business_license_code" name="ref_business_license_code" placeholder="请输入商户的营业执照号" maxlength="50"></li>
+      </ul>
+    </div>
+    <div class="form-group row salesman">
+      <h4><span></span><p>业务人员信息</p></h4>
+      <ul>
+      <li><label for="salesman_type" class="col-xs-4"><span style='color:red'>*</span>渠道类型</label>
+        <input class="col-xs-7 col-sm-2 form-control" type="text" id="salesman_type" ng-model="salesman_type" name="salesman_type" placeholder="请输入渠道类型" required>
+      </li>
+      <li><label for="salesman_branch" class="col-xs-4"><span style='color:red'>*</span>渠道名称</label>
+        <input class="col-xs-7 col-sm-2 form-control" type="text" id="salesman_branch" ng-model="salesman_branch" name="salesman_branch" placeholder="请输入渠道名称" required>
+      </li>
+      <li><label for="salesman_name" class="col-xs-4"><span style='color:red'>*</span>业务员姓名</label>
+        <input class="col-xs-7 col-sm-2 form-control" type="text" id="salesman_name" ng-model="salesman_name" name="salesman_name" placeholder="请输入业务员姓名" required>
+      </li>
+      <li><label for="salesman_phone" class="col-xs-4"><span style='color:red'>*</span>业务员手机号</label>
+        <input class="col-xs-7 col-sm-2 form-control" type="tel" id="salesman_phone" ng-model="salesman_phone" name="salesman_phone" placeholder="请输入业务员手机号" maxlength="11" minlength="11" required>
+      </li>
+    </ul>
+    </div>
+    <div class="form-group row disnone">
+      <h4><span></span><p>设备信息</p></h4>
+      <ul class="sheB">
+        <li class="col-xs-12 sheB_before">添加设备列表&nbsp;<img src="img/add.png" alt="" ng-click="add()"></li>
+        <li class="col-xs-12 sheBli">
+          <label class="col-xs-3">EN</label>
+          <input type="text" name="en" id="en_1" placeholder="EN" class="col-xs-5 form-control" required>
+          <div class="suggest clear col-xs-5"><ul></ul></div>
+          <span class="left"><img src='img/delete.png' alt=''></span>
+          <p class="col-xs-8 col-sm-5"></p>
+        </li>
+        <li class="col-xs-12 sheB_after"><img src="img/add.png" alt="" ng-click="add()">&nbsp;添加设备列表</li>
+      </ul>
+    </div>
+    <button type="submit" class="btn btn-info" ng-click="jump()" disabled>下一步</button>
+  </form>
+</div>
+<div class="pic" ng-show="erro">
+  <div>
+    <img src="img/Fail.png" alt="" style="width: 70px;height: 70px">
+    <br><br>
+    <p>{{err}}</p>
+    <p>如有问题，请咨询客服</p>
+    <a href="tel:028-69296292">028-69296292</a><br>
+  </div>
+</div>
+<div id="wodang"></div>
+<div cg-busy="P" style="top:-4em"></div>
+<div cg-busy="P1" style="top:-4em"></div>
+<div cg-busy="Lod"></div>
+<div class="modal" id="confirm">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close no" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">请确认！</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default no" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary ok" data-dismiss="modal">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="alert">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">提示！</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="confirmref">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close no" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">请确认！</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default no" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary ok" data-dismiss="modal">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div ui-view=""></div>

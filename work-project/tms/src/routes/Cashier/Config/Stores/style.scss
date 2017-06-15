@@ -1,0 +1,76 @@
+@import "../../../../styles/variable";
+
+.steps{
+  margin: $design-gutter * 2;
+}
+.footer{
+  margin-top: $design-gutter*3;
+  .ant-btn{
+    margin-right: $design-gutter;
+  }
+}
+.step{
+  border-top: solid 1px $grey_normal;
+  padding: $design-gutter * 2;
+  margin-bottom: $design-gutter * 2;
+  .title{
+    display: block;
+    margin-bottom: $design-gutter;
+  }
+}
+.step1{
+  .footer{
+    padding-top: $design-gutter*2;
+    border-top: solid 1px $grey_normal;
+  }
+  .config-check{
+    .ant-checkbox-group-item{
+      display: block;
+    }
+  }
+  .payment-cascader .ant-cascader-picker{
+    width: 176px;
+  }
+}
+
+.params-view{
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: $design-gutter*5;
+  .ant-input[disabled],.ant-select-disabled .ant-select-selection,.ant-checkbox-disabled+span,.ant-radio-disabled+span{
+    background: transparent;
+    color: rgba(0,0,0,.65);
+    cursor: default;
+    //border: none;
+    //resize: none;
+    //+.ant-calendar-picker-icon,.ant-select-arrow{
+    //  display: none;
+    //}
+  }
+}
+
+.step3{
+  .form{
+    max-width: 600px;
+    margin: auto;
+    .ant-form-item-wrapper{
+      width: 380px;
+      .desc{
+        display: block;
+        color: $dark-grey;
+      }
+    }
+  }
+}
+
+.step4{
+  .tip{
+    width: 500px;
+    margin: 50px auto;
+    .msg,.ant-alert-message{
+      display: inline-block;
+      margin-left: $design-gutter * 2;
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@import "../../styles/variable";
+@import "../../styles/mixin";
+$logo-width:178px;
+$logo-height:129px;
+$logo-width-sm:98px;
+$logo-height-sm:39px;
+$transition-duration:600ms;
+
+.nav-menu{
+  color: #ffffff;
+  .logo{
+    @include transition(all, $transition-duration);
+    position: absolute;
+    width: $logo-width;
+    height: $logo-height;
+    top: ($body-height - $logo-height) / 2;
+    left: ($nav-width-lg - $logo-width) / 2;
+    text-align: center;
+    .logo-img{
+      @include transition(all, $transition-duration);
+      width: 50px;
+    }
+    .text{
+      color: $grey_normal;
+      @include transition(opacity, $transition-duration);
+      overflow: hidden;
+      width: 100%;
+      text-overflow: clip;
+      white-space: nowrap;
+    }
+    >h1{
+      font-size: 18px;
+    }
+    .en-name{
+      font-size: 12px;
+    }
+  }
+}
+.fold{
+  .nav-menu{
+    .logo{
+      width: $logo-width-sm;
+      height: $logo-height-sm;
+      top: $design-gutter-large*2;
+      left: ($nav-width - $logo-width-sm) / 2;
+      >img{
+        width: 46px;
+      }
+      >.text{
+        opacity: 0;
+      }
+    }
+  }
+}
+.menu{
+  position: absolute;
+  left: 20px;
+  bottom: $design-gutter_large;
+  .user-info{
+    width: 70px;
+    margin: auto;
+    text-align: center;
+  }
+  .user-info{
+    margin-bottom: $design-gutter-large;
+    display: block;
+    .avatar{
+      margin: auto;
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      overflow: hidden;
+      background: #ffffff center no-repeat;
+      background-size: contain;
+      &:hover{
+        box-shadow: 0 0 3px 2px #83d4fb;
+        border-color: transparent;
+      }
+    }
+    .user-name{
+      font-size: 12px;
+      margin-top: 2px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: clip;
+      white-space: nowrap;
+      color: #ffffff;
+    }
+  }
+  .menu-item{
+    text-align: center;
+    margin-top: $design-gutter-large;
+    .ant-btn{
+      width: 20px;
+      height: 20px;
+      border:0;
+      color: $primary-color;
+      &:hover{
+        box-shadow: 0 0 3px 2px #83d4fb;
+        border-color: transparent;
+      }
+    }
+  }
+}

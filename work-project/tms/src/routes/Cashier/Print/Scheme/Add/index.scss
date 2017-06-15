@@ -1,0 +1,42 @@
+.scheme-add-item{
+  >div{
+    border:1px solid #ececec;
+    padding: 12px;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    height: 65px;
+    .plus{
+      font-size: 42px;
+    }
+  }
+  margin-bottom: 24px;
+  &:hover .delete{
+    right: 0;
+    cursor: pointer;
+
+  }
+  .delete{
+    position: absolute;
+    right: -30px;
+    width: 30px;
+    height: 100%;
+    background: red;
+    top: 0;
+    color: #ffffff;
+    text-align: center;
+    transition: right 100ms;
+    z-index: 9;
+    i{
+      margin-top: 24px;
+      font-size: 16px;
+    }
+  }
+}
+.scheme-add-by-channel-merchant{
+  .add-by-merchant{
+    input{
+      width: 200px;
+    }
+  }
+}

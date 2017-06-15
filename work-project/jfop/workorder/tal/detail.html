@@ -1,0 +1,80 @@
+<div cg-busy="Promise1"></div>
+<div class="container">
+  <div class="header">
+    <h4>{{merchant_name}}</h4>
+    <p>
+      <span class="label label-default" style="display: inline-block">{{disarr[0].mcode}}</span>
+      <span class="label label-default" ng-if="Wotype!=4&&(disarr[0].status==11||disarr[0].status==10)">{{disarr[0].status|statusNum}}</span>
+      <span class="label label-default" ng-if="Wotype==4&&(disarr[0].status==11||disarr[0].status==10)">待审核</span>
+      <span class="label label-danger" ng-if="disarr[0].status==0">{{disarr[0].status|statusNum}}</span>
+      <span class="label label-warning" ng-if="disarr[0].status==12">{{disarr[0].status| statusNum}}</span>
+      <span class="label label-success" ng-if="disarr[0].status==21">{{disarr[0].status| statusNum}}</span>
+      <button class="btn btn-info" ng-click="before()" ng-hide="btn">返回列表</button>
+    </p>
+  </div>
+  <div class="work">
+    <h4><span></span><p>工单信息</p></h4>
+    <hr>
+    <div class="row" ng-repeat="n in disarr">
+    <ul class="col-xs-12 col-sm-6">
+      <li><span>工单号：</span>{{n.work_no}}</li>
+      <li><span>工单类型：</span>{{n.wo_type|typeNum}}</li>
+      <li><span>创建时间：</span>{{n.create_time}}</li>
+      <li><span>所属渠道：</span>{{n.salesman_type |statusNum}}({{n.salesman_branch}})</li>
+      <li><span>支付方式：</span>{{pay_mode_name}}</li>
+    </ul>
+    <ul class="col-xs-12 col-sm-6">
+      <li><span>工单来源：</span>{{n.paperchannel}}</li>
+      <li><span>工单状态：</span>
+        <p style="display: inline-block" ng-if="Wotype!=4&&(n.status==11||n.status==10)||n.status==0||n.status==12||n.status==21">{{n.status| statusNum}}</p>
+        <p style="display: inline-block" ng-if="Wotype==4&&(n.status==11||n.status==10)">待审核</p>
+        <a href="{{n.toUrlPhone}}" ng-if="n.results.length&&n.status==12" target="_blank">【补件】</a>
+        <a href="../paper/apply.html?wo_id={{n.wo_id}}" target="_blank" ng-if="n.results.length==0&&n.wo_type==1&&n.status==12">【补件】</a>
+        <a href="../paper/apply_config.html#/basic?wo_id={{n.wo_id}}" target="_blank" ng-if="n.results.length==0&&n.wo_type==4&&n.status==12">【补件】</a>
+      </li>
+      <li><span>最近更新：</span>{{n.last_update_time}}</li>
+      <li><span>拓展人员：</span>{{n.salesman_name}}({{n.salesman_phone}})</li>
+      <li ng-hide="zhifT"><span>支付通道：</span>{{name}}</li>
+    </ul>
+    </div>
+    <div class="equipment" ng-hide="showt">
+      <p>设备信息：</p>
+      <p style="margin-left: 2em;margin-top: .5em">{{sheStr}}</p></div>
+  </div>
+  <div class="thelog" ng-hide="showf">
+    <h4><span></span><p>工单日志</p></h4>
+    <hr>
+    <ul>
+      <li ng-repeat="v in arr">
+        <ul class="thelog-ul clear row">
+          <b></b><i></i>
+          <li class="col-xs-12 col-sm-3">{{v.create_time}}<br ng-if="width>=480"><span> {{v.date}}</span></li>
+          <li class="col-xs-12 col-sm-4">{{v.description}}</li>
+          <li class="col-xs-12 col-sm-5" ng-show="v.remark">
+            <ul>
+            <li style="word-wrap: break-word;">{{v.remark}}</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="modal" id="alert">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">提示！</h4>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <button ng-click="top()" class="btn" >回到顶部</button>
+  </div>
+</div>
+<div cg-busy="Promise2"></div>

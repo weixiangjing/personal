@@ -1,0 +1,34 @@
+@import "../../styles/variable";
+@import "../../styles/mixin";
+@import "../../styles/core";
+
+#app-layout-base{
+  height: 100%;
+}
+#app-root{
+  min-height: 100%;
+}
+#app-container{
+  padding: 0 12px;
+  overflow: initial;
+}
+#app-breadcrumb{
+  margin: $design-gutter 0;
+}
+#app-body{
+  background: #ffffff;
+  padding: $design-gutter_large 0;
+  flex-direction: row;
+}
+#app-content{
+  padding: 0 $design-gutter_large;
+  min-height: 360px
+}
+#app-footer{
+  text-align: center;
+}
+.center-wrapper{
+  max-width: $content-body-max-width;
+  min-width: $content-body-min-width;
+  margin: auto;
+}

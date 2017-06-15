@@ -1,0 +1,34 @@
+@import "../../../styles/variable";
+
+#system-page{
+  .system-item{
+    display: inline-block;
+    margin: $design-gutter;
+    width: 160px;
+    max-width: 200px;
+    cursor: pointer;
+    .ant-card{
+      border: 0;
+      .ant-card-body{
+        padding: $design-gutter;
+      }
+    }
+    .icon{
+      $width:60px;
+      width: $width;
+      height: $width;
+      margin: auto;
+      background: no-repeat center;
+      background-size: cover;
+    }
+    .name{
+      text-align: center;
+      margin-top: $design-gutter;
+      font-size: 12px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

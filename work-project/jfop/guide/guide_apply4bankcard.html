@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="../paper/css/bootstrap.min.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="../icon/favicon-72x72.png">
+  <title>银行卡进件帮助</title>
+  <style>
+    body{
+      background: #ddd;
+      margin: 0;
+      padding-top: 20px;
+    }
+    ul,ol,li{
+      list-style: none;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      overflow: hidden;
+    }
+    h2{
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    li p{
+      text-align: center;
+    }
+    .left{
+      float: left;
+    }
+    div>p{
+      margin-left: 15px;
+    }
+    li{
+      position: relative;
+    }
+     b{
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 50px;
+      padding: 5px 0;
+      text-align: center;
+      color: #fff;
+      background: rgba(100, 100, 100, 0.7);
+    }
+    img{
+      border: 1px solid #ddd;
+    }
+    .tipsTow{
+      margin-left: 47px;
+    }
+    #center{
+      width: 80%;margin-left: 10%;background: #fff;padding: 10px;
+    }
+    @media screen and (max-width: 480px){
+      .tipsTow{
+        margin-left: 0;
+      }
+      ul{
+        padding-left: 10px;
+      }
+      h2{
+        font-size: 18px;
+      }
+      #center{
+        width: 98%;
+        margin-left:1%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="center">
+  <div id="acquiring_agreement">
+    <h2>收单协议</h2>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;凡新商户入网必须提供纸质收单协议签署，协议中商户只须填写“乙方”内容，请注意加盖公章<span style="color: red">（个体户无公章的须由法人签字+加盖手印）</span>。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;协议类型与进件的通道有关，不清楚请咨询微智金服运营中心。协议领用与回寄流程请咨询北京法务组“祖云亮”。</p>
+    <ul>
+      <li>1.类型一：JF06（杉德直联)通道，提供收单通道协议如下：</li>
+      <li class="left"><img src="images/yinlian_88.jpg" alt="" class="img-responsive"><b>示例</b><p>收单协议原件</p></li>
+      <li class="left"><img src="images/yinlian_89.jpg" alt="" class="img-responsive"><b>示例</b><p>（老版本）收单协议原件</p></li>
+      <li style="clear: both">
+        <ul style="background: #FFF7B2;padding: 10px">
+          <li>TIPS：</li>
+          <li>1.红色框的地方为固定内容（第三项的结算银行填写“杉德电商”、费率统一在备注栏填写“借记卡0.5%20封顶、贷记卡0.6%”）</li>
+          <li>2.纸质文件的第一联需要回寄『微智金服运营中心』</li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li>2.类型二：JF03通道，提供的收单协议如下:</li>
+      <li class="left"><img src="images/shoudan1.png" alt="" class="img-responsive"><b>示例</b><p>收单协议原件</p></li>
+      <li class="left"><img src="images/shoudan2.png" alt="" class="img-responsive"><b>示例</b><p>签字盖章示例</p></li>
+      <li style="clear: both">
+        <ul style="background: #FFF7B2;padding: 10px">
+          <li>TIPS：</li>
+          <li>1.在进件阶段可先提供协议原件的照片，之后各渠道、各分公司按月汇总后将原件（第一、二联）寄至微智金服运营中心。</li>
+          <li>2.除了钱宝收单协议，还需要提供一份『商户进件材料收集表』（<a href="docs/商户进件材料收集表.xlsx" target="_blank">模板下载</a>），请下载Excel模板填写后，打印并签字盖章后。</li>
+        </ul>
+      </li>
+      <li id="merchant_paper_collection" class="left"><img src="images/jf03_shoujibiao.jpeg" alt="" class="img-responsive"><b>示例</b><p>商户进件材料收集表</p></li>
+    </ul>
+  </div>
+  <div id="upside_rates">
+    <h2>优惠类费率说明（9.6价改后）</h2>
+    <ul>
+      <li>优惠类费率商户的申请范围仅有：超市、大型仓储式卖场、水电煤缴费、加油站（比如壳牌、中石油等）、交通运输售票类商户。</li>
+      <li>申请优惠费率的商户必须先在指定通道按『标准类』费率进件，之后再按照银联相关的业务流程进行申报，具体请咨询客服。</li>
+    </ul>
+  </div>
+  <div id="cert_type">
+    <h2>证件类型</h2>
+    <p>1.身份证</p>
+    <ul>
+      <li id="cert_photo">适用于中华人民共和国大陆地区居民</li>
+      <li style="float: left"><img src="images/yinlian_03.png" alt="" class="img-responsive"><b>示例</b><p>正面照</p></li>
+      <li style="float: left"><img src="images/yinlian_05.png" alt="" class="img-responsive"><b>示例</b><p>背面照</p></li>
+      <!--<li style="float: left"><img src="images/yinlian_10.png" alt="" class="img-responsive"><b>示例</b><p>法人身份证复印件</p></li>-->
+      <!--<li style="float: left"><img src="images/yinlian_12.png" alt="" class="img-responsive"><b>示例</b><p>被授权人身份证复印件</p></li>-->
+      <li style="clear: both">
+        <ul style="background: #FFF7B2;padding: 10px">
+          <li>TIPS：1.在证件有效期内，关键信息清晰，包括法人姓名、法人身份证号以及身份证有效期。</li>
+          <li class="tipsTow">2.法人身份证正反面原件照片，各1张（复印件须打印在一个页面且需要法人加盖手印+法人签字）</li>
+          <li class="tipsTow">3. 被授权人身份证正反面原件照片，各1张（结算至非法人对私账户提供）（复印件须打印在一个页面且需要法人加盖手印+法人签字），复印件须打印在一个页面</li>
+        </ul></li>
+    </ul>
+    <p>2.港澳通行证（港澳居民来往内地通行证或港澳同胞回乡证）</p>
+    <ul>
+      <li>适用于香港和澳门地区居民</li>
+      <li><img src="images/yinlian_17.png" alt="" class="img-responsive"><b>示例</b></li>
+    </ul>
+    <p>3.台胞证</p>
+    <ul>
+      <li>适用于台湾地区居民</li>
+      <li><img src="images/yinlian_21.png" alt="" class="img-responsive"><b>示例</b></li>
+    </ul>
+    <p>4.护照（境内的居留证或暂住证原件或复印件）</p>
+    <ul>
+      <li>适用于外籍人士</li>
+      <li><img src="images/yinlian_24.png" alt="" class="img-responsive"><b>示例</b></li>
+    </ul>
+  </div>
+  <div id="cert_photo_hand">
+    <h2>手持证件照</h2>
+    <ul>
+      <li><img src="images/yinlian_28.png" alt="" class="img-responsive"><b>示例</b></li>
+      <li style="background: #FFF7B2;padding: 10px;clear: both">Tips：所有手持证件照，均参考此照</li>
+    </ul>
+  </div>
+  <div id="business_license">
+    <h2>营业执照</h2>
+    <p>1.普通执照,示例如下</p>
+    <ul>
+      <li class="left"><img src="images/yinlian_31.png" alt="" class="img-responsive"><b>示例</b></li>
+      <li class="left"><img src="images/yinlian_33.png" alt="" class="img-responsive"><b>示例</b></li>
+      <li class="left"><img src="images/yinlian_37.png" alt="" class="img-responsive"><b>示例</b></li>
+      <li class="left"><img src="images/yinlian_39.png" alt="" class="img-responsive"><b>示例</b></li>
+    </ul>
+    <p>2.三证合一,示例如下</p>
+    <ul>
+      <li class="left"><img src="images/yinlian_43.png" alt="" class="img-responsive"><b>示例</b></li>
+    </ul>
+
+  </div>
+  <div id="bank_card">
+    <h2>银行卡照片</h2>
+    <p>银行卡正反面照片原件、复印件，各1张（结算至法人或非法人对私账户提供）银行卡原件正反面须组合在一个界面，示例如下</p>
+    <ul>
+      <li>1.原件</li>
+      <li class="left"><img src="images/yinlian_46.png" alt="" class="img-responsive"><b>示例</b><p>正面</p></li>
+      <li class="left"><img src="images/yinlian_48.png" alt="" class="img-responsive"><b>示例</b><p>背面</p></li>
+    </ul>
+    <ul>
+      <li>2.复印件</li>
+      <li class="left"><img src="images/yinlian_52.png" alt="" class="img-responsive"><b>示例</b><p>法人银行卡复印件</p></li>
+      <li class="left"><img src="images/yinlian_54.png" alt="" class="img-responsive"><b>示例</b><p>被授权人银行卡复印件</p></li>
+      <li style="clear: both">
+        <ul style="background: #FFF7B2;padding: 10px">
+          <li>TIPS：1.银行卡原件照片与复印件必须为同一张银行卡</li>
+          <li class="tipsTow">2.银行卡原件背面须填写户主姓名（复印后若签名栏不清楚的须要在复印件签名栏	手动填写户主姓名</li>
+          <li class="tipsTow">3.复印件中须（手动或打印）填写4要素（户名、账号、开户行支行、开户联行号）</li>
+          <li class="tipsTow">4.若复印件中的银行卡账户为法人的（结算为法人对私）填写的4要素账户信息与营业执照中的法人名称一致，企业商户须加盖公章，个体工商户无公章的提供（法人手印
+            +签字）。手印须为（鲜印）
+          </li>
+          <li class="tipsTow">5.若复印件中的银行卡账户为非法人的（结算未非法人对私）则填写的4要素信息为被授权人，企业商户（授权方）须加盖公章，个体工商户（授权方）无公章的提供（法
+            人手印+签字）。手印须为（鲜印）
+          </li>
+        </ul></li>
+    </ul>
+  </div>
+  <div id="account_opening">
+    <h2>开户许可证</h2>
+    <ul>
+      <li>原件，示例如下</li>
+      <li><img src="images/yinlian_58.png" alt="" class="img-responsive"><b>示例</b></li>
+    </ul>
+  </div>
+  <div id="auth_license">
+    <h2>商户授权书照片</h2>
+    <ul>
+      <li>原件，<span style="color: red">企业必须加盖公章鲜章（授权方）、个体商户无公章须由（授权方）法人加盖手印+签字</span>，示例如下：</li>
+      <li class="left"><img src="images/yinlian_61.png" alt="" class="img-responsive"><b>示例</b></li>
+      <li class="left"><img src="images/yinlian_63.png" alt="" class="img-responsive"><b>示例</b></li>
+    </ul>
+  </div>
+  <div id="add_device_desc">
+    <h2>增机说明书</h2>
+    <ul>
+      <li>1.JF06(杉德)通道&nbsp;&nbsp;&nbsp;增机说明书（<a href="docs/杉德增机申请表.doc" target="_blank">模板下载</a>）&nbsp;&nbsp;&nbsp;增机信息表（<a href="docs/杉德增机申请机具信息布放表.xlsx" target="_blank">模板下载</a>）</li>
+      <li><img src="images/zengjib.png" alt="" class="img-responsive"><b>示例</b></li>
+    </ul>
+    <ul>
+      <li>2.JF03&nbsp;&nbsp;&nbsp;增机说明书（<a href="docs/JF03增机情况说明书.docx" target="_blank">模板下载</a>）&nbsp;&nbsp;&nbsp;增机信息表（<a href="docs/JFO3增机信息表.xls" target="_blank">模板下载</a>）</li>
+      <li><img src="images/zengjis.png" alt="" class="img-responsive"><b>示例</b></li>
+    </ul>
+    <ul>
+      <li>3.JF02&nbsp;&nbsp;&nbsp;增机说明书（<a href="docs/JF02增机情况说明书.docx" target="_blank">模板下载</a>）</li>
+      <li><img src="images/zengjis.png" alt="" class="img-responsive"><b>示例</b></li>
+      <li style="background: #FFF7B2;padding: 10px;clear: both">Tips：情况说明需盖公章，个体无公章可法人盖手印</li>
+    </ul>
+  </div>
+  <div id="locations">
+    <h2>位置及环境</h2>
+    <p>门头照、收银台照、店铺内景照、店铺外景照，各1张（共计4张）</p>
+    <ul>
+      <li class="left"><img src="images/yinlian_79.jpg" alt="" class="img-responsive"><b>示例</b><p>门店外景照</p></li>
+      <li class="left"><img src="images/yinlian_84.jpg" alt="" class="img-responsive"><b>示例</b><p>门店门头照</p></li>
+      <li class="left"><img src="images/yinlian_87.jpg" alt="" class="img-responsive"><b>示例</b><p>门店收银照</p></li>
+      <li class="left"><img src="images/yinlian_81.jpg" alt="" class="img-responsive"><b>示例</b><p>门店内景照</p></li>
+    </ul>
+  </div>
+
+
+</div>
+</body>
+</html>
